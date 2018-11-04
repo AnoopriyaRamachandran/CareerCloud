@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
-    class SystemLanguageCodePoco
+    public class SystemLanguageCodePoco
     {
         public string LanguageID { get; set; }
         public string Name { get; set; }

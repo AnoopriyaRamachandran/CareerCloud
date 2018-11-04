@@ -8,5 +8,9 @@ namespace CareerCloud.Pocos
 {
     class SystemLanguageCodePoco
     {
+        public string LanguageID { get; set; }
+        public string Name { get; set; }
+        public string NativeName { get; set; }
+
     }
 }

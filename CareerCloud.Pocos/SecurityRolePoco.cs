@@ -8,5 +8,9 @@ namespace CareerCloud.Pocos
 {
     class SecurityRolePoco
     {
+        public Guid Id { get; set; }
+        public string Role { get; set; }
+        public Boolean IsInactive { get; set; }
+
     }
 }

@@ -8,5 +8,13 @@ namespace CareerCloud.Pocos
 {
     class CompanyProfilePoco
     {
+        public Guid Id { get; set; }
+        public DateTime RegistrationDate { get; set; }
+        public string CompanyWebsite { get; set; }
+        public string ContactPhone { get; set; }
+        public string ContactName { get; set; }
+        public byte?[] CompanyLogo { get; set; }
+        public byte?[] TimeStamp { get; set; }
+               
     }
 }

@@ -8,5 +8,11 @@ namespace CareerCloud.Pocos
 {
     class SecurityLoginLogPoco
     {
+        public Guid Id { get; set; }
+        public Guid Login { get; set; }
+        public string SourceIP { get; set; }
+        public DateTime LogonDate { get; set; }
+        public Boolean IsSuccesful { get; set; }
+
     }
 }

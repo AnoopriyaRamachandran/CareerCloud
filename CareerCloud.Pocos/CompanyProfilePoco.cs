@@ -22,9 +22,9 @@ namespace CareerCloud.Pocos
         [Column("Contact_Name")]
         public string ContactName { get; set; }
         [Column("Company_Logo")]
-        public byte?[] CompanyLogo { get; set; }
+        public byte[] CompanyLogo { get; set; }
         [Column("Time_Stamp")]
-        public byte?[] TimeStamp { get; set; }
+        public byte[] TimeStamp { get; set; }
                
     }
 }

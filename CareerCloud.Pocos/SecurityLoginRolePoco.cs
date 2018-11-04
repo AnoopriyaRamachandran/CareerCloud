@@ -16,7 +16,7 @@ namespace CareerCloud.Pocos
         public Guid Login { get; set; }
         public Guid Role { get; set; }
         [Column("Time_Stamp")]
-        public byte?[] TimeStamp { get; set; }
+        public byte[] TimeStamp { get; set; }
 
     }
 }

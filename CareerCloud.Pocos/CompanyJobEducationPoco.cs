@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
-    class CompanyJobEducationPoco
+    class CompanyJobEducationPoco : IPoco
     {
         public Guid Id { get; set; }
         public Guid Job { get; set; }

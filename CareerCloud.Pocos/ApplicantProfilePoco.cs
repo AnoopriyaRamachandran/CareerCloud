@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CareerCloud.Pocos
+namespace CareerCloud.Pocos 
 {
-    class ApplicantProfilePoco
+    class ApplicantProfilePoco : IPoco
     {
         public Guid Id { get; set; }
         public Guid Login { get; set; }

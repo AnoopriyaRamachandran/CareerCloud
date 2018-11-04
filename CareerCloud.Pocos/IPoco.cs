@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace CareerCloud.Pocos
 {
-    class SecurityRolePoco : IPoco
+    interface IPoco
     {
-        public Guid Id { get; set; }
-        public string Role { get; set; }
-        public Boolean IsInactive { get; set; }
-
+         Guid Id { get; set; }
     }
 }

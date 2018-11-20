@@ -88,7 +88,7 @@ namespace CareerCloud.ADODataAccessLayer
                 }
 
             }
-            return pocos.ToList();
+            return pocos.Where(a=> a!=null).ToList();
         }
 
         public IList<ApplicantEducationPoco> GetList(Expression<Func<ApplicantEducationPoco, bool>> where, params Expression<Func<ApplicantEducationPoco, object>>[] navigationProperties)
@@ -103,7 +103,20 @@ namespace CareerCloud.ADODataAccessLayer
 
         public void Remove(params ApplicantEducationPoco[] items)
         {
-            throw new NotImplementedException();
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                SqlCommand command = new SqlCommand();
+                command.Connection = conn;
+                foreach (ApplicantEducationPoco poco in items)
+                {
+                    command.CommandText = @"DELETE FROM [dbo].[Applicant_Educations] WHERE Id=@Id";
+                    command.Parameters.AddWithValue("@Id", poco.Id);                    
+                    conn.Open();
+                    int rowEffected = command.ExecuteNonQuery();
+                    conn.Close();
+
+                }
+            }
         }
 
         public void Update(params ApplicantEducationPoco[] items)

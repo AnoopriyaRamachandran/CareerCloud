@@ -128,7 +128,7 @@ namespace CareerCloud.ADODataAccessLayer
                 command.Connection = conn;
                 foreach (ApplicantEducationPoco poco in items)
                 {
-                    command.CommandText = @"UPDATE Applicant_Educations set Applicant=@Applicant,Major=@Major,Certificate_Diploma=@Certificate_Diploma,Start_Date=@Start_Date,Completion_Date=@Completion_Date,Completion_Percent=@Completion_Percent WHERE Id=@Id";
+                    command.CommandText = @"UPDATE Applicant_Educations SET Applicant=@Applicant,Major=@Major,Certificate_Diploma=@Certificate_Diploma,Start_Date=@Start_Date,Completion_Date=@Completion_Date,Completion_Percent=@Completion_Percent WHERE Id=@Id";
                     command.Parameters.AddWithValue("@Applicant", poco.Applicant);
                     command.Parameters.AddWithValue("@Major", poco.Major);
                     command.Parameters.AddWithValue("@Certificate_Diploma", poco.CertificateDiploma);

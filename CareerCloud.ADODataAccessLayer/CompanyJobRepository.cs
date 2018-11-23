@@ -41,7 +41,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public IList<CompanyJobPoco> GetAll(params Expression<Func<CompanyJobPoco, object>>[] navigationProperties)
         {
-            CompanyJobPoco[] pocos = new CompanyJobPoco[1000];
+            CompanyJobPoco[] pocos = new CompanyJobPoco[1500];
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Company_Jobs]", conn);
@@ -56,7 +56,14 @@ namespace CareerCloud.ADODataAccessLayer
                     poco.ProfileCreated = reader.GetDateTime(2);
                     poco.IsInactive = reader.GetBoolean(3);
                     poco.IsCompanyHidden = reader.GetBoolean(4);
-                    poco.TimeStamp = (byte[])reader[5];
+                    if(!reader.IsDBNull(5))
+                    {
+                        poco.TimeStamp = (byte[])reader[5];
+                    }
+                    else
+                    {
+                        poco.TimeStamp = null;
+                    }                    
                     pocos[position] = poco;
                     position++;
                 }

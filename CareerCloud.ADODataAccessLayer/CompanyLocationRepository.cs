@@ -43,7 +43,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public IList<CompanyLocationPoco> GetAll(params Expression<Func<CompanyLocationPoco, object>>[] navigationProperties)
         {
-            CompanyLocationPoco[] pocos = new CompanyLocationPoco[500];
+            CompanyLocationPoco[] pocos = new CompanyLocationPoco[1000];
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Company_Locations]", conn);
@@ -56,10 +56,41 @@ namespace CareerCloud.ADODataAccessLayer
                     poco.Id = reader.GetGuid(0);
                     poco.Company = reader.GetGuid(1);
                     poco.CountryCode = reader.GetString(2);
-                    poco.Province = reader.GetString(3);
-                    poco.Street = reader.GetString(4);
-                    poco.City = reader.GetString(5);
-                    poco.PostalCode = reader.GetString(6);
+                    if(!reader.IsDBNull(3))
+                    {
+                        poco.Province = reader.GetString(3);
+                    }
+                    else
+                    {
+                        poco.Province = null;
+                    }
+                    if (!reader.IsDBNull(3))
+                    {
+                        poco.Street = reader.GetString(4);
+                    }
+                    else
+                    {
+                        poco.Street = null;
+                    }             
+                    if(!reader.IsDBNull(5))
+                    {
+                        poco.City = reader.GetString(5);
+
+                    }
+                    else
+                    {
+                        poco.City = null;
+
+                    }
+                    if (!reader.IsDBNull(6))
+                    {
+                        poco.PostalCode = reader.GetString(6);
+                    }
+                    else
+                    {
+                        poco.PostalCode = null;
+
+                    }
                     poco.TimeStamp = (byte[])reader[7];
                     pocos[position] = poco;
                     position++;

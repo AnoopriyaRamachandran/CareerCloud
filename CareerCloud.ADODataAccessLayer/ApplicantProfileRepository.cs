@@ -77,12 +77,57 @@ namespace CareerCloud.ADODataAccessLayer
                         poco.CurrentRate = null;
 
                     }
-                    poco.Currency = reader.GetString(4);
-                    poco.Country = reader.GetString(5);
-                    poco.Province = reader.GetString(6);
-                    poco.Street = reader.GetString(7);
-                    poco.City = reader.GetString(8);
-                    poco.PostalCode = reader.GetString(9);
+                    if(!reader.IsDBNull(4))
+                    {
+                        poco.Currency = reader.GetString(4);
+
+                    }
+                    else
+                    {
+                        poco.Currency = null;
+
+                    }
+                    if(!reader.IsDBNull(5))
+                    {
+                        poco.Country = reader.GetString(5);
+                    }
+                    else
+                    {
+                        poco.Country = null;
+                    }
+                    if (!reader.IsDBNull(5))
+                    {
+                        poco.Province = reader.GetString(6);
+                    }
+                    else
+                    {
+                        poco.Province = null;
+                    }
+                    if (!reader.IsDBNull(5))
+                    {
+                        poco.Street = reader.GetString(7);
+                    }
+                    else
+                    {
+                        poco.Street = null;
+                    }
+                    if (!reader.IsDBNull(5))
+                    {
+                        poco.City = reader.GetString(8);
+                    }
+                    else
+                    {
+                        poco.City = null;
+                    }
+                    if (!reader.IsDBNull(5))
+                    {
+                        poco.PostalCode = reader.GetString(9);
+                    }       
+                    else
+                    {
+                        poco.PostalCode = null;
+
+                    }
                     poco.TimeStamp = (byte[])reader[10];
                     pocos[position] = poco;
                     position++;

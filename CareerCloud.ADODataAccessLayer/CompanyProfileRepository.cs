@@ -42,7 +42,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public IList<CompanyProfilePoco> GetAll(params Expression<Func<CompanyProfilePoco, object>>[] navigationProperties)
         {
-            CompanyProfilePoco[] pocos = new CompanyProfilePoco[500];
+            CompanyProfilePoco[] pocos = new CompanyProfilePoco[1000];
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Company_Profiles]", conn);
@@ -54,11 +54,43 @@ namespace CareerCloud.ADODataAccessLayer
                     CompanyProfilePoco poco = new CompanyProfilePoco();
                     poco.Id = reader.GetGuid(0);
                     poco.RegistrationDate = reader.GetDateTime(1);
-                    poco.CompanyWebsite = reader.GetString(2);
+                    if (!reader.IsDBNull(2))
+                    {
+                        poco.CompanyWebsite = reader.GetString(2);
+                    }
+                    else
+                    {
+                        poco.CompanyWebsite = null;
+                    }
+                    
                     poco.ContactPhone = reader.GetString(3);
-                    poco.ContactName = reader.GetString(4);
-                    poco.CompanyLogo = (byte[])reader[5];                    
-                    poco.TimeStamp = (byte[])reader[6];
+                    if (!reader.IsDBNull(4))
+                    {
+                        poco.ContactName = reader.GetString(4);
+                    }
+                    else
+                    {
+                        poco.ContactName = null;
+                    }
+                    
+                    if (!reader.IsDBNull(5))
+                    {
+                        poco.CompanyLogo = (byte[])reader[5];
+                    }
+                    else
+                    {
+                        poco.CompanyLogo = null;
+                    }
+                    
+                    if (!reader.IsDBNull(6))
+                    {
+                        poco.TimeStamp = (byte[])reader[6];
+                    }
+                    else
+                    {
+                        poco.TimeStamp = null;
+                    }
+                    
                     pocos[position] = poco;
                     position++;
                 }

@@ -49,7 +49,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public IList<SecurityLoginPoco> GetAll(params Expression<Func<SecurityLoginPoco, object>>[] navigationProperties)
         {
-            SecurityLoginPoco[] pocos = new SecurityLoginPoco[500];
+            SecurityLoginPoco[] pocos = new SecurityLoginPoco[1000];
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Security_Logins]", conn);
@@ -82,10 +82,37 @@ namespace CareerCloud.ADODataAccessLayer
                     poco.IsLocked = reader.GetBoolean(6);
                     poco.IsInactive = reader.GetBoolean(7);
                     poco.EmailAddress = reader.GetString(8);
-                    poco.PhoneNumber = reader.GetString(9);
-                    poco.FullName = reader.GetString(10);
+                    if(!reader.IsDBNull(9))
+                    {
+                        poco.PhoneNumber = reader.GetString(9);
+
+                    }
+                    else
+                    {
+                        poco.PhoneNumber = null;
+
+                    }
+                    if(!reader.IsDBNull(10))
+                    {
+                        poco.FullName = reader.GetString(10);
+
+                    }
+                    else
+                    {
+                        poco.FullName = null;
+
+                    }
                     poco.ForceChangePassword = reader.GetBoolean(11);
-                    poco.PrefferredLanguage = reader.GetString(12);
+                    if(!reader.IsDBNull(12))
+                    {
+                        poco.PrefferredLanguage = reader.GetString(12);
+
+                    }
+                    else
+                    {
+                        poco.PrefferredLanguage = null;
+
+                    }
                     poco.TimeStamp = (byte[])reader[13];
                     pocos[position] = poco;
                     position++;

@@ -51,7 +51,16 @@ namespace CareerCloud.ADODataAccessLayer
                     SecurityLoginsRolePoco poco = new SecurityLoginsRolePoco();
                     poco.Id = reader.GetGuid(0);
                     poco.Login = reader.GetGuid(1);
-                    poco.Role = reader.GetGuid(2);                    
+                    poco.Role = reader.GetGuid(2);
+                    if(!reader.IsDBNull(3))
+                    {
+                        poco.TimeStamp = (byte[])reader[3];
+                    }
+                    else
+                    {
+                        poco.TimeStamp = null;
+                    }
+                    
                     pocos[position] = poco;
                     position++;
                 }

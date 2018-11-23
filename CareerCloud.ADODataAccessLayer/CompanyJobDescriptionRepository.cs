@@ -40,7 +40,7 @@ namespace CareerCloud.ADODataAccessLayer
 
         public IList<CompanyJobDescriptionPoco> GetAll(params Expression<Func<CompanyJobDescriptionPoco, object>>[] navigationProperties)
         {
-            CompanyJobDescriptionPoco[] pocos = new CompanyJobDescriptionPoco[1000];
+            CompanyJobDescriptionPoco[] pocos = new CompanyJobDescriptionPoco[1500];
             using (SqlConnection conn = new SqlConnection(connString))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Company_Jobs_Descriptions]", conn);
@@ -52,9 +52,30 @@ namespace CareerCloud.ADODataAccessLayer
                     CompanyJobDescriptionPoco poco = new CompanyJobDescriptionPoco();
                     poco.Id = reader.GetGuid(0);
                     poco.Job = reader.GetGuid(1);
-                    poco.JobName = reader.GetString(2);
-                    poco.JobDescriptions = reader.GetString(3);                    
-                    poco.TimeStamp = (byte[])reader[4];
+                    if(!reader.IsDBNull(2))
+                    {
+                        poco.JobName = reader.GetString(2);
+                    }
+                    else
+                    {
+                        poco.JobName = null;
+                    }
+                    if (!reader.IsDBNull(3))
+                    {
+                        poco.JobDescriptions = reader.GetString(3);
+                    }
+                    else
+                    {
+                        poco.JobDescriptions = null;
+                    }
+                    if (!reader.IsDBNull(4))
+                    {
+                        poco.TimeStamp = (byte[])reader[4];
+                    }
+                    else
+                    {
+                        poco.TimeStamp = null;
+                    }                
                     pocos[position] = poco;
                     position++;
                 }

@@ -57,8 +57,17 @@ namespace CareerCloud.ADODataAccessLayer
                     poco.Id = reader.GetGuid(0);
                     poco.Applicant = reader.GetGuid(1);
                     poco.Major = reader.GetString(2);
-                    poco.CertificateDiploma = reader.GetString(3);
-                    if(!reader.IsDBNull(4))
+                    if(!reader.IsDBNull(3))
+                    {
+                        poco.CertificateDiploma = reader.GetString(3);
+
+                    }
+                    else
+                    {
+                        poco.CertificateDiploma = null;
+
+                    }
+                    if (!reader.IsDBNull(4))
                     {
                         poco.StartDate = reader.GetDateTime(4);
                     }

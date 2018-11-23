@@ -46,6 +46,7 @@ namespace CareerCloud.ADODataAccessLayer
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [dbo].[Applicant_Job_Applications]", conn);
                 int position = 0;
+                conn.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -58,6 +59,7 @@ namespace CareerCloud.ADODataAccessLayer
                     pocos[position] = poco;
                     position++;
                 }
+                conn.Close();
 
             }
             return pocos.Where(a => a != null).ToList();

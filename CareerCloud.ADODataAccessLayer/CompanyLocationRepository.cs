@@ -65,7 +65,6 @@ namespace CareerCloud.ADODataAccessLayer
                     position++;
                 }
                 conn.Close();
-
             }
             return pocos.Where(a => a != null).ToList();
         }

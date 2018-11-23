@@ -67,7 +67,7 @@ namespace CareerCloud.ADODataAccessLayer
                     {
                         poco.CurrentSalary = null;
                     }
-                    if(reader.IsDBNull(3))
+                    if(!reader.IsDBNull(3))
                     {
                         poco.CurrentRate = reader.GetDecimal(3);
 

@@ -14,5 +14,31 @@ namespace CareerCloud.BusinessLogicLayer
         {
 
         }
+        public override void Add(SecurityRolePoco[] pocos)
+        {
+            Verify(pocos);
+            base.Add(pocos);
+        }
+        public override void Update(SecurityRolePoco[] pocos)
+        {
+            Verify(pocos);
+            base.Update(pocos);
+        }
+        protected override void Verify(SecurityRolePoco[] pocos)
+        {
+            List<ValidationException> exceptions = new List<ValidationException>();
+            foreach (SecurityRolePoco item in pocos)
+            {
+                if (item.Role ==string.Empty)
+                {
+                    exceptions.Add(new ValidationException(800, "{item.Id}"));
+                }
+                
+            }
+            if (exceptions.Count > 0)
+            {
+                throw new AggregateException(exceptions);
+            }
+        }
     }
 }

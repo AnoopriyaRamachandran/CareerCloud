@@ -14,5 +14,34 @@ namespace CareerCloud.BusinessLogicLayer
         {
 
         }
+        public override void Add(CompanyJobDescriptionPoco[] pocos)
+        {
+            Verify(pocos);
+            base.Add(pocos);
+        }
+        public override void Update(CompanyJobDescriptionPoco[] pocos)
+        {
+            Verify(pocos);
+            base.Update(pocos);
+        }
+        protected override void Verify(CompanyJobDescriptionPoco[] pocos)
+        {
+            List<ValidationException> exceptions = new List<ValidationException>();
+            foreach (CompanyJobDescriptionPoco item in pocos)
+            {
+                if ((item.JobName =="") || (item.JobName is null))
+                {
+                    exceptions.Add(new ValidationException(300, "{item.Id}"));
+                }
+                if ((item.JobDescriptions =="") || (item.JobDescriptions is null))
+                {
+                    exceptions.Add(new ValidationException(301, "{item.Id}"));
+                }                
+            }
+            if (exceptions.Count > 0)
+            {
+                throw new AggregateException(exceptions);
+            }
+        }
     }
 }

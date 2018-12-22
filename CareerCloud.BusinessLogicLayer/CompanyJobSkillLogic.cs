@@ -31,7 +31,7 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.Importance < 0)
                 {
-                    exceptions.Add(new ValidationException(400, "{item.Id}"));
+                    exceptions.Add(new ValidationException(400, $"Importance for CompanyJobSkillLogin {item.Id} cannot be less than 0."));
                 }
                 
             }

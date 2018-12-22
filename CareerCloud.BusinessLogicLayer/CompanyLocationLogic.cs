@@ -29,25 +29,25 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (CompanyLocationPoco item in pocos)
             {
-                if (item.CountryCode =="")
+                if (item.CountryCode ==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(500, "{item.Id}"));
+                    exceptions.Add(new ValidationException(500, $"CountryCode for CompanyLocationLogin {item.Id} cannot be empty."));
                 }
-                if (item.Province=="")
+                if (item.Province==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(501, "{item.Id}"));
+                    exceptions.Add(new ValidationException(501, $"Province for CompanyLocationLogin {item.Id} cannot be empty."));
                 }
-                if (item.Street =="")
+                if (item.Street ==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(502, "{item.Id}"));
+                    exceptions.Add(new ValidationException(502, $"Street for CompanyLocationLogin {item.Id} cannot be empty."));
                 }
-                if(item.City=="")
+                if(item.City==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(503, "{item.Id}"));
+                    exceptions.Add(new ValidationException(503, $"City for CompanyLocationLogin {item.Id} cannot be empty."));
                 }
-                if(item.PostalCode=="")
+                if(item.PostalCode==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(504, "{item.Id}"));
+                    exceptions.Add(new ValidationException(504, $"PostalCode for CompanyLocationLogin {item.Id} cannot be empty."));
                 }
             }
             if (exceptions.Count > 0)

@@ -29,13 +29,13 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (CompanyJobDescriptionPoco item in pocos)
             {
-                if ((item.JobName =="") || (item.JobName is null))
+                if ((item.JobName ==string.Empty) || (item.JobName is null))
                 {
-                    exceptions.Add(new ValidationException(300, "{item.Id}"));
+                    exceptions.Add(new ValidationException(300, $"JobName for CompanyJobDescriptionLogin {item.Id} cannot be null or empty."));
                 }
-                if ((item.JobDescriptions =="") || (item.JobDescriptions is null))
+                if ((item.JobDescriptions ==string.Empty) || (item.JobDescriptions is null))
                 {
-                    exceptions.Add(new ValidationException(301, "{item.Id}"));
+                    exceptions.Add(new ValidationException(301, $"JobDescriptions for CompanyJobDescriptionLogin {item.Id} cannot be null or empty."));
                 }                
             }
             if (exceptions.Count > 0)

@@ -23,15 +23,15 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.LanguageID == string.Empty)
                 {
-                    exceptions.Add(new ValidationException(1000, "{item.LanguageID}"));
+                    exceptions.Add(new ValidationException(1000, $"LanguageID for SystemLanguageCodeLogin {item.LanguageID} cannot be empty."));
                 }
                 if (item.Name == string.Empty)
                 {
-                    exceptions.Add(new ValidationException(1001, "{item.LanguageID}"));
+                    exceptions.Add(new ValidationException(1001, $"Name for SystemLanguageCodeLogin {item.LanguageID} cannot be empty."));
                 }
                 if (item.NativeName == string.Empty)
                 {
-                    exceptions.Add(new ValidationException(1002, "{item.LanguageID}"));
+                    exceptions.Add(new ValidationException(1002, $"NativeName for SystemLanguageCodeLogin {item.LanguageID} cannot be empty."));
                 }
 
             }

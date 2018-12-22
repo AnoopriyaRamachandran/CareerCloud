@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using CareerCloud.DataAccessLayer;
 using CareerCloud.Pocos;
@@ -30,9 +32,15 @@ namespace CareerCloud.BusinessLogicLayer
             foreach (CompanyProfilePoco item in pocos)
             {
                 string[] phoneComponents = item.ContactPhone.Split('-');
-                if (item.CompanyWebsite < 3)
+                string[] webextension = { "ca", "com", "biz" };
+                string userextension = Path.GetExtension(item.CompanyWebsite);
+                for(int i=0;i<webextension.Length;i++)
                 {
-                    exceptions.Add(new ValidationException(600, "{item.Id}"));
+                    if (userextension!=webextension[i])
+                    {
+                        exceptions.Add(new ValidationException(600, $"CompanyWebsite for CompanyProfileLogin {item.Id} is not a valid website format."));
+                    }
+
                 }                
                 if (phoneComponents.Length < 3)
                 {

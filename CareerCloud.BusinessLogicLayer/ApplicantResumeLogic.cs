@@ -29,9 +29,9 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (ApplicantResumePoco item in pocos)
             {
-                if (item.Resume =="")
+                if (item.Resume ==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(113, "{item.Id}"));
+                    exceptions.Add(new ValidationException(113, $"Resume for ApplicantResumeLogin {item.Id} cannot be empty."));
                 }
                 
             }

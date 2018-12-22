@@ -31,11 +31,11 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.Major.Length < 2)
                 {
-                    exceptions.Add(new ValidationException(200, "{item.Id}"));
+                    exceptions.Add(new ValidationException(200, $"Length for CompanJobEducationLogin {item.Id} must be atleast 2 characters."));
                 }
                 if (item.Importance < 0)
                 {
-                    exceptions.Add(new ValidationException(201, "{item.Id}"));
+                    exceptions.Add(new ValidationException(201, $"Importance for CompanyJobEducationLogin {item.Id} cannot be less than 0."));
                 }
                
             }

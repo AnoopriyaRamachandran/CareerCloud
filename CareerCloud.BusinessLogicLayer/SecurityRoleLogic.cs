@@ -31,7 +31,7 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.Role ==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(800, "{item.Id}"));
+                    exceptions.Add(new ValidationException(800, $"Role for SecurityRoleLogin {item.Id} cannot be empty."));
                 }
                 
             }

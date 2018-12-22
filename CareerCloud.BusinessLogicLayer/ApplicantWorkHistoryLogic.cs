@@ -31,7 +31,7 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.CompanyName.Length < 2)
                 {
-                    exceptions.Add(new ValidationException(105, "{item.Id}"));
+                    exceptions.Add(new ValidationException(105, $"CompanyName for ApplicantWorkHistoryLogin {item.Id} must be greater than 2 characters."));
                 }
                 
             }

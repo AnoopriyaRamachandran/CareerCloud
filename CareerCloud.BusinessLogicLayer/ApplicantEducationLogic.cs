@@ -30,17 +30,17 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach(ApplicantEducationPoco item in pocos)
             {
-                if(item.Major.Length <3)
+                if(item.Major.Length <3 || item.Major==string.Empty)
                 {
-                    exceptions.Add(new ValidationException(107, "{item.Id}"));
+                    exceptions.Add(new ValidationException(107, $"Major Length for ApplicationEducationLogin {item.Id} cannot be less than 3 or empty."));
                 }
                 if(item.StartDate>DateTime.Now)
                 {
-                    exceptions.Add(new ValidationException(108, "{item.Id}"));
+                    exceptions.Add(new ValidationException(108, $"StartDate for ApplicationEducationLogin {item.Id} Cannot be greater than today's date."));
                 }
                 if (item.CompletionDate < item.StartDate)
                 {
-                    exceptions.Add(new ValidationException(109, "{item.Id}"));
+                    exceptions.Add(new ValidationException(109, $"CompletionDate for ApplicationEducationLogin {item.Id} cannot be earlier than StartDate."));
                 }
             }
             if (exceptions.Count > 0)

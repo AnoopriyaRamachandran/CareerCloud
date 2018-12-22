@@ -23,11 +23,11 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.Code == string.Empty)
                 {
-                    exceptions.Add(new ValidationException(900, "{item.Code}"));
+                    exceptions.Add(new ValidationException(900, $"Code for SystemCountryCodeLogin {item.Code} cannot be empty."));
                 }
                 if (item.Name == string.Empty)
                 {
-                    exceptions.Add(new ValidationException(901, "{item.Code}"));
+                    exceptions.Add(new ValidationException(901, $"Name for SystemCountryCodeLogin {item.Code} cannot be empty."));
                 }
                 
             }

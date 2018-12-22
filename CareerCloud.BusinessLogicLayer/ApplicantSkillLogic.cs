@@ -31,19 +31,19 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.StartMonth > 12)
                 {
-                    exceptions.Add(new ValidationException(101, "{item.Id}"));
+                    exceptions.Add(new ValidationException(101, $"StartMonth for ApplicantSkillLogin {item.Id} cannot be greater than 12."));
                 }
                 if (item.EndMonth > 12)
                 {
-                    exceptions.Add(new ValidationException(102, "{item.Id}"));
+                    exceptions.Add(new ValidationException(102, $"EndMonth for ApplicantProfileLogin {item.Id} cannot be greater than 12."));
                 }
                 if (item.StartYear < 1900)
                 {
-                    exceptions.Add(new ValidationException(103, "{item.Id}"));
+                    exceptions.Add(new ValidationException(103, $"StartYear for ApplicantProfileLogin {item.Id} cannot be less then 1900."));
                 }
                 if (item.EndYear < item.StartYear)
                 {
-                    exceptions.Add(new ValidationException(104, "{item.Id}"));
+                    exceptions.Add(new ValidationException(104, $"EndYear for ApplicantProfileLogin {item.Id} cannot be less then StartYear."));
                 }
             }
             if (exceptions.Count > 0)

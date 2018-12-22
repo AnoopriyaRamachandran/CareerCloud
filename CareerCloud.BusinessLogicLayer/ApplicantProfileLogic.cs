@@ -31,11 +31,11 @@ namespace CareerCloud.BusinessLogicLayer
             {
                 if (item.CurrentSalary < 0)
                 {
-                    exceptions.Add(new ValidationException(111, "{item.Id}"));
+                    exceptions.Add(new ValidationException(111, $"CurrentSalary for ApplicantProfileLogin {item.Id} cannot be negative."));
                 }
                 if (item.CurrentRate < 0)
                 {
-                    exceptions.Add(new ValidationException(112, "{item.Id}"));
+                    exceptions.Add(new ValidationException(112, $"CurrentRate for ApplicantProfileLogin {item.Id} cannot be negative."));
                 }
                 
             }

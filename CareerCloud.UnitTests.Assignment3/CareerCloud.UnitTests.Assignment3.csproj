@@ -75,20 +75,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CareerCloud.ADODataAccessLayer\CareerCloud.ADODataAccessLayer.csproj">
-      <Project>{284facfa-966e-4016-8a39-a92c0637b3d2}</Project>
+    <ProjectReference Include="..\CareerCloud.ADODataAccessLayer\CareerCloud.ADODataAccessLayer.csproj">
+      <Project>{04457fc7-083c-46ed-b527-e9d42708c869}</Project>
       <Name>CareerCloud.ADODataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CareerCloud.BusinessLogicLayer\CareerCloud.BusinessLogicLayer.csproj">
-      <Project>{bc1c7fb2-6676-4fd4-b281-fa3f0acbb7ec}</Project>
+    <ProjectReference Include="..\CareerCloud.BusinessLogicLayer\CareerCloud.BusinessLogicLayer.csproj">
+      <Project>{c8d3329d-b617-404e-bb81-edcc0fcb72a5}</Project>
       <Name>CareerCloud.BusinessLogicLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CareerCloud.DataAccessLayer\CareerCloud.DataAccessLayer.csproj">
-      <Project>{95844af3-bc02-4e5f-860e-96b18e541c21}</Project>
+    <ProjectReference Include="..\CareerCloud.DataAccessLayer\CareerCloud.DataAccessLayer.csproj">
+      <Project>{143c3aeb-713e-4e25-a845-8c63e9f64968}</Project>
       <Name>CareerCloud.DataAccessLayer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\CareerCloud.Pocos\CareerCloud.Pocos.csproj">
-      <Project>{facb9a11-546f-4a1e-b20b-df66a299f246}</Project>
+    <ProjectReference Include="..\CareerCloud.Pocos\CareerCloud.Pocos.csproj">
+      <Project>{cd123328-d336-4ffb-af42-50263474e057}</Project>
       <Name>CareerCloud.Pocos</Name>
     </ProjectReference>
   </ItemGroup>

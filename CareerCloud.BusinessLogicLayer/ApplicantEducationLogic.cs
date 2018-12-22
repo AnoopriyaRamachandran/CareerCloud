@@ -30,7 +30,7 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach(ApplicantEducationPoco item in pocos)
             {
-                if(item.Major.Length <3 || item.Major==string.Empty)
+                if(item.Major.Length <3)
                 {
                     exceptions.Add(new ValidationException(107, $"Major Length for ApplicationEducationLogin {item.Id} cannot be less than 3 or empty."));
                 }

@@ -17,6 +17,17 @@ namespace CareerCloud.BusinessLogicLayer
             _repository = repository;
         }
 
+        public void Add(SystemLanguageCodePoco[] pocos)
+        {
+            Verify(pocos);
+            _repository.Add(pocos);
+        }
+
+        public void Update(SystemLanguageCodePoco[] pocos)
+        {
+            Verify(pocos);
+            _repository.Update(pocos);
+        }
         protected void Verify(SystemLanguageCodePoco[] pocos)
         {
             List<ValidationException> exceptions = new List<ValidationException>();
@@ -52,17 +63,7 @@ namespace CareerCloud.BusinessLogicLayer
             return _repository.GetAll().ToList();
         }
 
-        public void Add(SystemLanguageCodePoco[] pocos)
-        {
-            Verify(pocos);
-            _repository.Add(pocos);
-        }
-
-        public void Update(SystemLanguageCodePoco[] pocos)
-        {
-            Verify(pocos);
-            _repository.Update(pocos);
-        }
+        
 
         public void Delete(SystemLanguageCodePoco[] pocos)
         {

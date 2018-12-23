@@ -8,7 +8,7 @@ using CareerCloud.Pocos;
 
 namespace CareerCloud.BusinessLogicLayer
 {
-    public class SystemCountryCodeLogic
+    public class SystemCountryCodeLogic : SystemCountryCodePoco
     {
         protected IDataRepository<SystemCountryCodePoco> _repository;
         public SystemCountryCodeLogic(IDataRepository<SystemCountryCodePoco> repository)

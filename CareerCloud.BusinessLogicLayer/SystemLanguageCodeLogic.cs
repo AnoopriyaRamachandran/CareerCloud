@@ -9,7 +9,7 @@ using CareerCloud.Pocos;
 
 namespace CareerCloud.BusinessLogicLayer
 {
-    public class SystemLanguageCodeLogic 
+    public class SystemLanguageCodeLogic : SystemLanguageCodePoco
     {
         protected IDataRepository<SystemLanguageCodePoco> _repository;
         public SystemLanguageCodeLogic(IDataRepository<SystemLanguageCodePoco> repository)

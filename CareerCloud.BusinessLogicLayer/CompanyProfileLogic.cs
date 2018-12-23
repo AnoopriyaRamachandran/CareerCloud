@@ -31,7 +31,7 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (CompanyProfilePoco item in pocos)
             {
-                string[] phoneComponents = item.ContactPhone.Split('-');
+                
                 string[] webextension = { "ca", "com", "biz" };
                 string userextension = Path.GetExtension(item.CompanyWebsite);
                 for(int i=0;i<webextension.Length;i++)
@@ -41,27 +41,35 @@ namespace CareerCloud.BusinessLogicLayer
                         exceptions.Add(new ValidationException(600, $"CompanyWebsite for CompanyProfileLogin {item.Id} is not a valid website format."));
                     }
 
-                }                
-                if (phoneComponents.Length < 3)
+                }
+                if (string.IsNullOrEmpty(item.ContactPhone))
                 {
-                    exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
+                    exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is required."));
+
                 }
                 else
                 {
-                    if (phoneComponents[0].Length < 3)
+                    string[] phoneComponents = item.ContactPhone.Split('-');
+                    if (phoneComponents.Length < 3)
                     {
                         exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
                     }
-                    else if (phoneComponents[1].Length < 3)
+                    else
                     {
-                        exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
-                    }
-                    else if (phoneComponents[2].Length < 4)
-                    {
-                        exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
+                        if (phoneComponents[0].Length < 3)
+                        {
+                            exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
+                        }
+                        else if (phoneComponents[1].Length < 3)
+                        {
+                            exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
+                        }
+                        else if (phoneComponents[2].Length < 4)
+                        {
+                            exceptions.Add(new ValidationException(601, $"ContactPhoneNumber for CompanyProfileLogin {item.Id} is not in the required format."));
+                        }
                     }
                 }
-                
             }
             if (exceptions.Count > 0)
             {

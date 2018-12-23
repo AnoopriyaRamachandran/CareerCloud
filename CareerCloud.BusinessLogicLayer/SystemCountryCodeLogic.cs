@@ -21,11 +21,11 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (SystemCountryCodePoco item in pocos)
             {
-                if (item.Code == string.Empty)
+                if (string.IsNullOrEmpty(item.Code))
                 {
                     exceptions.Add(new ValidationException(900, $"Code for SystemCountryCodeLogin {item.Code} cannot be empty."));
                 }
-                if (item.Name == string.Empty)
+                if (string.IsNullOrEmpty(item.Name))
                 {
                     exceptions.Add(new ValidationException(901, $"Name for SystemCountryCodeLogin {item.Code} cannot be empty."));
                 }

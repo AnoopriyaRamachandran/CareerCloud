@@ -33,15 +33,15 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (SystemLanguageCodePoco item in pocos)
             {
-                if (item.LanguageID== string.Empty)
+                if (string.IsNullOrEmpty(item.LanguageID))
                 {
                     exceptions.Add(new ValidationException(1000, $"LanguageID for SystemLanguageCodeLogin {item.LanguageID} cannot be empty."));
                 }
-                if (item.Name == string.Empty)
+                if (string.IsNullOrEmpty(item.Name))
                 {
                     exceptions.Add(new ValidationException(1001, $"Name for SystemLanguageCodeLogin {item.LanguageID} cannot be empty."));
                 }
-                if (item.NativeName == string.Empty)
+                if (string.IsNullOrEmpty(item.NativeName))
                 {
                     exceptions.Add(new ValidationException(1002, $"NativeName for SystemLanguageCodeLogin {item.LanguageID} cannot be empty."));
                 }

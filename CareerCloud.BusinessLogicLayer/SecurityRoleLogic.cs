@@ -29,7 +29,7 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (SecurityRolePoco item in pocos)
             {
-                if (item.Role ==string.Empty)
+                if (string.IsNullOrEmpty(item.Role))
                 {
                     exceptions.Add(new ValidationException(800, $"Role for SecurityRoleLogin {item.Id} cannot be empty."));
                 }

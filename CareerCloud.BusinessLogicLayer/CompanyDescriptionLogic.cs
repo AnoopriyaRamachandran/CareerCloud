@@ -29,13 +29,13 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (CompanyDescriptionPoco item in pocos)
             {
-                if (item.CompanyDescription.Length < 2)
+                if (string.IsNullOrEmpty(item.CompanyDescription) ||item.CompanyDescription.Length < 3)
                 {
-                    exceptions.Add(new ValidationException(107, $"CompanyDescription for CompanyDescriptionLogin {item.Id} must be greater than 2 characters."));
+                    exceptions.Add(new ValidationException(107, $"CompanyDescription for CompanyDescriptionLogin {item.Id} must not be empty and must be greater than 2 characters."));
                 }
-                if (item.CompanyName.Length < 2)
+                if (string.IsNullOrEmpty(item.CompanyName) || item.CompanyName.Length < 3)
                 {
-                    exceptions.Add(new ValidationException(106, $"CompanyName for CompanyDescriptionLogin {item.Id} must be greater than 2 characters."));
+                    exceptions.Add(new ValidationException(106, $"CompanyName for CompanyDescriptionLogin {item.Id} must not be empty and must be greater than 2 characters."));
                 }
                 
             }

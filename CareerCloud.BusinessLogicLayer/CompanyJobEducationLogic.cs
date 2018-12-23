@@ -29,7 +29,7 @@ namespace CareerCloud.BusinessLogicLayer
             List<ValidationException> exceptions = new List<ValidationException>();
             foreach (CompanyJobEducationPoco item in pocos)
             {
-                if (item.Major.Length < 2)
+                if (string.IsNullOrEmpty(item.Major)||item.Major.Length < 2)
                 {
                     exceptions.Add(new ValidationException(200, $"Length for CompanJobEducationLogin {item.Id} must be atleast 2 characters."));
                 }

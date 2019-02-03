@@ -11,12 +11,33 @@ namespace CareerCloud.EntityFrameworkDataAccess
 {
     class CareerCloudContext : DbContext
     {
-        public CareerCloudContext() : base(ConfigurationManager.ConnectionStrings["dbcoonection"].ConnectionString)
+        public CareerCloudContext() : base(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString)
         {
-                
+
+                Database.Log= l =>System.Diagnostics.Debug.WriteLine(l);
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ApplicantProfilePoco>().HasMany(a => a.ApplicantEducations).WithRequired(e => e.ApplicantProfiles).HasForeignKey(e => e.Applicant);
+
+
+
+
+
+            modelBuilder.Entity<ApplicantEducationPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<ApplicantJobApplicationPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<ApplicantProfilePoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<ApplicantSkillPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<ApplicantWorkHistoryPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyDescriptionPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyJobDescriptionPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyJobEducationPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyJobPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyJobSkillPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyLocationPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<CompanyProfilePoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<SecurityLoginPoco>().Ignore(o => o.TimeStamp);
+            modelBuilder.Entity<SecurityLoginsRolePoco>().Ignore(o => o.TimeStamp);
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<ApplicantEducationPoco> ApplicantEducations { get; set; }

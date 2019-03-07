@@ -21,7 +21,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyDescriptionPoco GetSingleCompanyDescription(Guid id);
         [OperationContract]
-        void RemoveCompanyDescription(Guid id);
+        void RemoveCompanyDescription(CompanyDescriptionPoco[] items);
         [OperationContract]
         void UpdateCompanyDescription(CompanyDescriptionPoco[] items);
 
@@ -34,7 +34,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyJobDescriptionPoco GetSingleCompanyJobDescription(Guid id);
         [OperationContract]
-        void RemoveCompanyJobDescription(Guid id);
+        void RemoveCompanyJobDescription(CompanyJobDescriptionPoco[] items);
         [OperationContract]
         void UpdateCompanyJobDescription(CompanyJobDescriptionPoco[] items);
 
@@ -46,7 +46,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyJobEducationPoco GetSingleCompanyJobEducation(Guid id);
         [OperationContract]
-        void RemoveCompanyJobEducation(Guid id);
+        void RemoveCompanyJobEducation(CompanyJobEducationPoco[] items);
         [OperationContract]
         void UpdateCompanyJobEducation(CompanyJobEducationPoco[] items);
 
@@ -58,7 +58,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyJobPoco GetSingleCompanyJob(Guid id);
         [OperationContract]
-        void RemoveCompanyJob(Guid id);
+        void RemoveCompanyJob(CompanyJobPoco[] items);
         [OperationContract]
         void UpdateCompanyJob(CompanyJobPoco[] items);
 
@@ -70,7 +70,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyJobSkillPoco GetSingleCompanyJobSkill(Guid id);
         [OperationContract]
-        void RemoveCompanyJobSkill(Guid id);
+        void RemoveCompanyJobSkill(CompanyJobSkillPoco[] items);
         [OperationContract]
         void UpdateCompanyJobSkill(CompanyJobSkillPoco[] items);
 
@@ -82,7 +82,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyLocationPoco GetSingleCompanyLocation(Guid id);
         [OperationContract]
-        void RemoveCompanyLocation(Guid id);
+        void RemoveCompanyLocation(CompanyLocationPoco[] items);
         [OperationContract]
         void UpdateCompanyLocation(CompanyLocationPoco[] items);
 
@@ -94,7 +94,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         CompanyProfilePoco GetSingleCompanyProfile(Guid id);
         [OperationContract]
-        void RemoveCompanyProfile(Guid id);
+        void RemoveCompanyProfile(CompanyProfilePoco[] items);
         [OperationContract]
         void UpdateCompanyProfile(CompanyProfilePoco[] items);
 

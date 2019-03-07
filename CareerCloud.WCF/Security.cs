@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using CareerCloud.BusinessLogicLayer;
+using CareerCloud.EntityFrameworkDataAccess;
 using CareerCloud.Pocos;
 
 namespace CareerCloud.WCF
@@ -13,102 +15,142 @@ namespace CareerCloud.WCF
     {
         public void AddSecurityLogin(SecurityLoginPoco[] item)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginPoco> securityloginrepo = new EFGenericRepository<SecurityLoginPoco>(false);
+            SecurityLoginLogic _securityloginlogic = new SecurityLoginLogic(securityloginrepo);
+            _securityloginlogic.Add(item);
         }
 
         public void AddSecurityLoginsLog(SecurityLoginsLogPoco[] item)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsLogPoco> securityloginslogrepo = new EFGenericRepository<SecurityLoginsLogPoco>(false);
+            SecurityLoginsLogLogic _securityloginsloglogic = new SecurityLoginsLogLogic(securityloginslogrepo);
+            _securityloginsloglogic.Add(item);
         }
 
         public void AddSecurityLoginsRole(SecurityLoginsRolePoco[] item)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsRolePoco> securityloginsrolerepo = new EFGenericRepository<SecurityLoginsRolePoco>(false);
+            SecurityLoginsRoleLogic _securityloginsrolelogic = new SecurityLoginsRoleLogic(securityloginsrolerepo);
+            _securityloginsrolelogic.Add(item);
         }
 
         public void AddSecurityRole(SecurityRolePoco[] item)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityRolePoco> securityrolerepo = new EFGenericRepository<SecurityRolePoco>(false);
+            SecurityRoleLogic _securityrolelogic = new SecurityRoleLogic(securityrolerepo);
+            _securityrolelogic.Add(item);
         }
 
         public List<SecurityLoginPoco> GetAllSecurityLogin()
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginPoco> securityloginrepo = new EFGenericRepository<SecurityLoginPoco>(false);
+            SecurityLoginLogic _securityloginlogic = new SecurityLoginLogic(securityloginrepo);
+            return _securityloginlogic.GetAll();
         }
 
         public List<SecurityLoginsLogPoco> GetAllSecurityLoginsLog()
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsLogPoco> securityloginslogrepo = new EFGenericRepository<SecurityLoginsLogPoco>(false);
+            SecurityLoginsLogLogic _securityloginsloglogic = new SecurityLoginsLogLogic(securityloginslogrepo);
+            return _securityloginsloglogic.GetAll();
         }
 
         public List<SecurityLoginsRolePoco> GetAllSecurityLoginsRole()
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsRolePoco> securityloginsrolerepo = new EFGenericRepository<SecurityLoginsRolePoco>(false);
+            SecurityLoginsRoleLogic _securityloginsrolelogic = new SecurityLoginsRoleLogic(securityloginsrolerepo);
+            return _securityloginsrolelogic.GetAll();
         }
 
         public List<SecurityRolePoco> GetAllSecurityRole()
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityRolePoco> securityrolerepo = new EFGenericRepository<SecurityRolePoco>(false);
+            SecurityRoleLogic _securityrolelogic = new SecurityRoleLogic(securityrolerepo);
+            return _securityrolelogic.GetAll();
         }
 
         public SecurityLoginPoco GetSingleSecurityLogin(Guid id)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginPoco> securityloginrepo = new EFGenericRepository<SecurityLoginPoco>(false);
+            SecurityLoginLogic _securityloginlogic = new SecurityLoginLogic(securityloginrepo);
+            return _securityloginlogic.Get(id);
         }
 
         public SecurityLoginsLogPoco GetSingleSecurityLoginsLog(Guid id)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsLogPoco> securityloginslogrepo = new EFGenericRepository<SecurityLoginsLogPoco>(false);
+            SecurityLoginsLogLogic _securityloginsloglogic = new SecurityLoginsLogLogic(securityloginslogrepo);
+            return _securityloginsloglogic.Get(id);
         }
 
         public SecurityLoginsRolePoco GetSingleSecurityLoginsRole(Guid id)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsRolePoco> securityloginsrolerepo = new EFGenericRepository<SecurityLoginsRolePoco>(false);
+            SecurityLoginsRoleLogic _securityloginsrolelogic = new SecurityLoginsRoleLogic(securityloginsrolerepo);
+            return _securityloginsrolelogic.Get(id);
         }
 
         public SecurityRolePoco GetSingleSecurityRole(Guid id)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityRolePoco> securityrolerepo = new EFGenericRepository<SecurityRolePoco>(false);
+            SecurityRoleLogic _securityrolelogic = new SecurityRoleLogic(securityrolerepo);
+            return _securityrolelogic.Get(id);
         }
 
-        public void RemoveSecurityLogin(Guid id)
+        public void RemoveSecurityLogin(SecurityLoginPoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginPoco> securityloginrepo = new EFGenericRepository<SecurityLoginPoco>(false);
+            SecurityLoginLogic _securityloginlogic = new SecurityLoginLogic(securityloginrepo);
+            _securityloginlogic.Delete(items);
         }
 
-        public void RemoveSecurityLoginsLog(Guid id)
+        public void RemoveSecurityLoginsLog(SecurityLoginsLogPoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsLogPoco> securityloginslogrepo = new EFGenericRepository<SecurityLoginsLogPoco>(false);
+            SecurityLoginsLogLogic _securityloginsloglogic = new SecurityLoginsLogLogic(securityloginslogrepo);
+            _securityloginsloglogic.Delete(items);
         }
 
-        public void RemoveSecurityLoginsRole(Guid id)
+        public void RemoveSecurityLoginsRole(SecurityLoginsRolePoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsRolePoco> securityloginsrolerepo = new EFGenericRepository<SecurityLoginsRolePoco>(false);
+            SecurityLoginsRoleLogic _securityloginsrolelogic = new SecurityLoginsRoleLogic(securityloginsrolerepo);
+            _securityloginsrolelogic.Delete(items);
         }
 
-        public void RemoveSecurityRole(Guid id)
+        public void RemoveSecurityRole(SecurityRolePoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityRolePoco> securityrolerepo = new EFGenericRepository<SecurityRolePoco>(false);
+            SecurityRoleLogic _securityrolelogic = new SecurityRoleLogic(securityrolerepo);
+            _securityrolelogic.Delete(items);
         }
 
         public void UpdateSecurityLogin(SecurityLoginPoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginPoco> securityloginrepo = new EFGenericRepository<SecurityLoginPoco>(false);
+            SecurityLoginLogic _securityloginlogic = new SecurityLoginLogic(securityloginrepo);
+            _securityloginlogic.Update(items);
         }
 
         public void UpdateSecurityLoginsLog(SecurityLoginsLogPoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsLogPoco> securityloginslogrepo = new EFGenericRepository<SecurityLoginsLogPoco>(false);
+            SecurityLoginsLogLogic _securityloginsloglogic = new SecurityLoginsLogLogic(securityloginslogrepo);
+            _securityloginsloglogic.Update(items);
         }
 
         public void UpdateSecurityLoginsRole(SecurityLoginsRolePoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityLoginsRolePoco> securityloginsrolerepo = new EFGenericRepository<SecurityLoginsRolePoco>(false);
+            SecurityLoginsRoleLogic _securityloginsrolelogic = new SecurityLoginsRoleLogic(securityloginsrolerepo);
+            _securityloginsrolelogic.Update(items);
         }
 
         public void UpdateSecurityRole(SecurityRolePoco[] items)
         {
-            throw new NotImplementedException();
+            EFGenericRepository<SecurityRolePoco> securityrolerepo = new EFGenericRepository<SecurityRolePoco>(false);
+            SecurityRoleLogic _securityrolelogic = new SecurityRoleLogic(securityrolerepo);
+            _securityrolelogic.Update(items);
         }
     }
 }

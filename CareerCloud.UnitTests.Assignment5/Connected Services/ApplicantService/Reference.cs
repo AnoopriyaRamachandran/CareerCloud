@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CareerCloud.UnitTests.Assignment5.Applicant {
+namespace CareerCloud.UnitTests.Assignment5.ApplicantService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Applicant.IApplicant")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ApplicantService.IApplicant")]
     public interface IApplicant {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/AddApplicantEducation", ReplyAction="http://tempuri.org/IApplicant/AddApplicantEducationResponse")]
@@ -28,10 +28,10 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
         System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantEducationPoco[]> GetAllApplicantEducationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantEducation", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantEducationResponse")]
-        CareerCloud.Pocos.ApplicantEducationPoco GetSingleApplicantEducation(System.Guid id);
+        CareerCloud.Pocos.ApplicantEducationPoco GetSingleApplicantEducation(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantEducation", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantEducationResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantEducationPoco> GetSingleApplicantEducationAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantEducationPoco> GetSingleApplicantEducationAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/RemoveApplicantEducation", ReplyAction="http://tempuri.org/IApplicant/RemoveApplicantEducationResponse")]
         void RemoveApplicantEducation(CareerCloud.Pocos.ApplicantEducationPoco[] items);
@@ -58,10 +58,10 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
         System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantJobApplicationPoco[]> GetAllApplicantJobApplicationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantJobApplication", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantJobApplicationResponse")]
-        CareerCloud.Pocos.ApplicantJobApplicationPoco GetSingleApplicantJobApplication(System.Guid id);
+        CareerCloud.Pocos.ApplicantJobApplicationPoco GetSingleApplicantJobApplication(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantJobApplication", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantJobApplicationResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantJobApplicationPoco> GetSingleApplicantJobApplicationAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantJobApplicationPoco> GetSingleApplicantJobApplicationAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/RemoveApplicantJobApplication", ReplyAction="http://tempuri.org/IApplicant/RemoveApplicantJobApplicationResponse")]
         void RemoveApplicantJobApplication(CareerCloud.Pocos.ApplicantJobApplicationPoco[] items);
@@ -88,10 +88,10 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
         System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantProfilePoco[]> GetAllApplicantProfileAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantProfile", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantProfileResponse")]
-        CareerCloud.Pocos.ApplicantProfilePoco GetSingleApplicantProfile(System.Guid id);
+        CareerCloud.Pocos.ApplicantProfilePoco GetSingleApplicantProfile(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantProfile", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantProfileResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantProfilePoco> GetSingleApplicantProfileAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantProfilePoco> GetSingleApplicantProfileAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/RemoveApplicantProfile", ReplyAction="http://tempuri.org/IApplicant/RemoveApplicantProfileResponse")]
         void RemoveApplicantProfile(CareerCloud.Pocos.ApplicantProfilePoco[] items);
@@ -118,10 +118,10 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
         System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantResumePoco[]> GetAllApplicantResumeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantResume", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantResumeResponse")]
-        CareerCloud.Pocos.ApplicantResumePoco GetSingleApplicantResume(System.Guid id);
+        CareerCloud.Pocos.ApplicantResumePoco GetSingleApplicantResume(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantResume", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantResumeResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantResumePoco> GetSingleApplicantResumeAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantResumePoco> GetSingleApplicantResumeAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/RemoveApplicantResume", ReplyAction="http://tempuri.org/IApplicant/RemoveApplicantResumeResponse")]
         void RemoveApplicantResume(CareerCloud.Pocos.ApplicantResumePoco[] items);
@@ -148,10 +148,10 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
         System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantSkillPoco[]> GetAllApplicantSkillAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantSkill", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantSkillResponse")]
-        CareerCloud.Pocos.ApplicantSkillPoco GetSingleApplicantSkill(System.Guid id);
+        CareerCloud.Pocos.ApplicantSkillPoco GetSingleApplicantSkill(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantSkill", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantSkillResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantSkillPoco> GetSingleApplicantSkillAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantSkillPoco> GetSingleApplicantSkillAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/RemoveApplicantSkill", ReplyAction="http://tempuri.org/IApplicant/RemoveApplicantSkillResponse")]
         void RemoveApplicantSkill(CareerCloud.Pocos.ApplicantSkillPoco[] items);
@@ -178,10 +178,10 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
         System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantWorkHistoryPoco[]> GetAllApplicantWorkHistoryAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistory", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistoryResponse")]
-        CareerCloud.Pocos.ApplicantWorkHistoryPoco GetSingleApplicantWorkHistory(System.Guid id);
+        CareerCloud.Pocos.ApplicantWorkHistoryPoco GetSingleApplicantWorkHistory(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistory", ReplyAction="http://tempuri.org/IApplicant/GetSingleApplicantWorkHistoryResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantWorkHistoryPoco> GetSingleApplicantWorkHistoryAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantWorkHistoryPoco> GetSingleApplicantWorkHistoryAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IApplicant/RemoveApplicantWorkHistory", ReplyAction="http://tempuri.org/IApplicant/RemoveApplicantWorkHistoryResponse")]
         void RemoveApplicantWorkHistory(CareerCloud.Pocos.ApplicantWorkHistoryPoco[] items);
@@ -197,12 +197,12 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IApplicantChannel : CareerCloud.UnitTests.Assignment5.Applicant.IApplicant, System.ServiceModel.IClientChannel {
+    public interface IApplicantChannel : CareerCloud.UnitTests.Assignment5.ApplicantService.IApplicant, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ApplicantClient : System.ServiceModel.ClientBase<CareerCloud.UnitTests.Assignment5.Applicant.IApplicant>, CareerCloud.UnitTests.Assignment5.Applicant.IApplicant {
+    public partial class ApplicantClient : System.ServiceModel.ClientBase<CareerCloud.UnitTests.Assignment5.ApplicantService.IApplicant>, CareerCloud.UnitTests.Assignment5.ApplicantService.IApplicant {
         
         public ApplicantClient() {
         }
@@ -239,11 +239,11 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
             return base.Channel.GetAllApplicantEducationAsync();
         }
         
-        public CareerCloud.Pocos.ApplicantEducationPoco GetSingleApplicantEducation(System.Guid id) {
+        public CareerCloud.Pocos.ApplicantEducationPoco GetSingleApplicantEducation(string id) {
             return base.Channel.GetSingleApplicantEducation(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantEducationPoco> GetSingleApplicantEducationAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantEducationPoco> GetSingleApplicantEducationAsync(string id) {
             return base.Channel.GetSingleApplicantEducationAsync(id);
         }
         
@@ -279,11 +279,11 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
             return base.Channel.GetAllApplicantJobApplicationAsync();
         }
         
-        public CareerCloud.Pocos.ApplicantJobApplicationPoco GetSingleApplicantJobApplication(System.Guid id) {
+        public CareerCloud.Pocos.ApplicantJobApplicationPoco GetSingleApplicantJobApplication(string id) {
             return base.Channel.GetSingleApplicantJobApplication(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantJobApplicationPoco> GetSingleApplicantJobApplicationAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantJobApplicationPoco> GetSingleApplicantJobApplicationAsync(string id) {
             return base.Channel.GetSingleApplicantJobApplicationAsync(id);
         }
         
@@ -319,11 +319,11 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
             return base.Channel.GetAllApplicantProfileAsync();
         }
         
-        public CareerCloud.Pocos.ApplicantProfilePoco GetSingleApplicantProfile(System.Guid id) {
+        public CareerCloud.Pocos.ApplicantProfilePoco GetSingleApplicantProfile(string id) {
             return base.Channel.GetSingleApplicantProfile(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantProfilePoco> GetSingleApplicantProfileAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantProfilePoco> GetSingleApplicantProfileAsync(string id) {
             return base.Channel.GetSingleApplicantProfileAsync(id);
         }
         
@@ -359,11 +359,11 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
             return base.Channel.GetAllApplicantResumeAsync();
         }
         
-        public CareerCloud.Pocos.ApplicantResumePoco GetSingleApplicantResume(System.Guid id) {
+        public CareerCloud.Pocos.ApplicantResumePoco GetSingleApplicantResume(string id) {
             return base.Channel.GetSingleApplicantResume(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantResumePoco> GetSingleApplicantResumeAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantResumePoco> GetSingleApplicantResumeAsync(string id) {
             return base.Channel.GetSingleApplicantResumeAsync(id);
         }
         
@@ -399,11 +399,11 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
             return base.Channel.GetAllApplicantSkillAsync();
         }
         
-        public CareerCloud.Pocos.ApplicantSkillPoco GetSingleApplicantSkill(System.Guid id) {
+        public CareerCloud.Pocos.ApplicantSkillPoco GetSingleApplicantSkill(string id) {
             return base.Channel.GetSingleApplicantSkill(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantSkillPoco> GetSingleApplicantSkillAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantSkillPoco> GetSingleApplicantSkillAsync(string id) {
             return base.Channel.GetSingleApplicantSkillAsync(id);
         }
         
@@ -439,11 +439,11 @@ namespace CareerCloud.UnitTests.Assignment5.Applicant {
             return base.Channel.GetAllApplicantWorkHistoryAsync();
         }
         
-        public CareerCloud.Pocos.ApplicantWorkHistoryPoco GetSingleApplicantWorkHistory(System.Guid id) {
+        public CareerCloud.Pocos.ApplicantWorkHistoryPoco GetSingleApplicantWorkHistory(string id) {
             return base.Channel.GetSingleApplicantWorkHistory(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantWorkHistoryPoco> GetSingleApplicantWorkHistoryAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.ApplicantWorkHistoryPoco> GetSingleApplicantWorkHistoryAsync(string id) {
             return base.Channel.GetSingleApplicantWorkHistoryAsync(id);
         }
         

@@ -1,12 +1,12 @@
-﻿using System;
+﻿using CareerCloud.BusinessLogicLayer;
+using CareerCloud.EntityFrameworkDataAccess;
+using CareerCloud.Pocos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using CareerCloud.BusinessLogicLayer;
-using CareerCloud.EntityFrameworkDataAccess;
-using CareerCloud.Pocos;
 
 namespace CareerCloud.WCF
 {
@@ -61,7 +61,7 @@ namespace CareerCloud.WCF
             CompanyProfileLogic _companyprofilelogic = new CompanyProfileLogic(companyprofilerepo);
             _companyprofilelogic.Add(item);
         }
-              
+
 
         public List<CompanyDescriptionPoco> GetAllCompanyDescription()
         {
@@ -112,53 +112,53 @@ namespace CareerCloud.WCF
             return _companyprofilelogic.GetAll();
         }
 
-        public CompanyDescriptionPoco GetSingleCompanyDescription(Guid id)
+        public CompanyDescriptionPoco GetSingleCompanyDescription(string id)
         {
             EFGenericRepository<CompanyDescriptionPoco> companydescriptionrepo = new EFGenericRepository<CompanyDescriptionPoco>(false);
             CompanyDescriptionLogic _companydescriptionlogic = new CompanyDescriptionLogic(companydescriptionrepo);
-            return _companydescriptionlogic.Get(id);
+            return _companydescriptionlogic.Get(Guid.Parse(id));
         }
 
-        public CompanyJobPoco GetSingleCompanyJob(Guid id)
+        public CompanyJobPoco GetSingleCompanyJob(string id)
         {
             EFGenericRepository<CompanyJobPoco> companyjobrepo = new EFGenericRepository<CompanyJobPoco>(false);
             CompanyJobLogic _companyjoblogic = new CompanyJobLogic(companyjobrepo);
-            return _companyjoblogic.Get(id);
+            return _companyjoblogic.Get(Guid.Parse(id));
         }
 
-        public CompanyJobDescriptionPoco GetSingleCompanyJobDescription(Guid id)
+        public CompanyJobDescriptionPoco GetSingleCompanyJobDescription(string id)
         {
             EFGenericRepository<CompanyJobDescriptionPoco> companyjobdescriptionrepo = new EFGenericRepository<CompanyJobDescriptionPoco>(false);
             CompanyJobDescriptionLogic _companyjobdescriptionlogic = new CompanyJobDescriptionLogic(companyjobdescriptionrepo);
-            return _companyjobdescriptionlogic.Get(id);
+            return _companyjobdescriptionlogic.Get(Guid.Parse(id));
         }
 
-        public CompanyJobEducationPoco GetSingleCompanyJobEducation(Guid id)
+        public CompanyJobEducationPoco GetSingleCompanyJobEducation(string id)
         {
             EFGenericRepository<CompanyJobEducationPoco> companyjobeducationrepo = new EFGenericRepository<CompanyJobEducationPoco>(false);
             CompanyJobEducationLogic _companyjobeducationlogic = new CompanyJobEducationLogic(companyjobeducationrepo);
-            return _companyjobeducationlogic.Get(id);
+            return _companyjobeducationlogic.Get(Guid.Parse(id));
         }
 
-        public CompanyJobSkillPoco GetSingleCompanyJobSkill(Guid id)
+        public CompanyJobSkillPoco GetSingleCompanyJobSkill(string id)
         {
             EFGenericRepository<CompanyJobSkillPoco> companyjobskillrepo = new EFGenericRepository<CompanyJobSkillPoco>(false);
             CompanyJobSkillLogic _companyjobskilllogic = new CompanyJobSkillLogic(companyjobskillrepo);
-            return _companyjobskilllogic.Get(id);
+            return _companyjobskilllogic.Get(Guid.Parse(id));
         }
 
-        public CompanyLocationPoco GetSingleCompanyLocation(Guid id)
+        public CompanyLocationPoco GetSingleCompanyLocation(string id)
         {
             EFGenericRepository<CompanyLocationPoco> companylocationrepo = new EFGenericRepository<CompanyLocationPoco>(false);
             CompanyLocationLogic _companylocationlogic = new CompanyLocationLogic(companylocationrepo);
-            return _companylocationlogic.Get(id);
+            return _companylocationlogic.Get(Guid.Parse(id));
         }
 
-        public CompanyProfilePoco GetSingleCompanyProfile(Guid id)
+        public CompanyProfilePoco GetSingleCompanyProfile(string id)
         {
             EFGenericRepository<CompanyProfilePoco> companyprofilerepo = new EFGenericRepository<CompanyProfilePoco>(false);
             CompanyProfileLogic _companyprofilelogic = new CompanyProfileLogic(companyprofilerepo);
-            return _companyprofilelogic.Get(id);
+            return _companyprofilelogic.Get(Guid.Parse(id));
         }
 
         public void RemoveCompanyDescription(CompanyDescriptionPoco[] items)

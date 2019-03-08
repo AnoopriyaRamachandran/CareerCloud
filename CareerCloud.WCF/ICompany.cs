@@ -19,7 +19,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyDescriptionPoco> GetAllCompanyDescription();
         [OperationContract]
-        CompanyDescriptionPoco GetSingleCompanyDescription(Guid id);
+        CompanyDescriptionPoco GetSingleCompanyDescription(string id);
         [OperationContract]
         void RemoveCompanyDescription(CompanyDescriptionPoco[] items);
         [OperationContract]
@@ -32,7 +32,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyJobDescriptionPoco> GetAllCompanyJobDescription();
         [OperationContract]
-        CompanyJobDescriptionPoco GetSingleCompanyJobDescription(Guid id);
+        CompanyJobDescriptionPoco GetSingleCompanyJobDescription(string id);
         [OperationContract]
         void RemoveCompanyJobDescription(CompanyJobDescriptionPoco[] items);
         [OperationContract]
@@ -44,7 +44,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyJobEducationPoco> GetAllCompanyJobEducation();
         [OperationContract]
-        CompanyJobEducationPoco GetSingleCompanyJobEducation(Guid id);
+        CompanyJobEducationPoco GetSingleCompanyJobEducation(string id);
         [OperationContract]
         void RemoveCompanyJobEducation(CompanyJobEducationPoco[] items);
         [OperationContract]
@@ -56,7 +56,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyJobPoco> GetAllCompanyJob();
         [OperationContract]
-        CompanyJobPoco GetSingleCompanyJob(Guid id);
+        CompanyJobPoco GetSingleCompanyJob(string id);
         [OperationContract]
         void RemoveCompanyJob(CompanyJobPoco[] items);
         [OperationContract]
@@ -68,7 +68,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyJobSkillPoco> GetAllCompanyJobSkill();
         [OperationContract]
-        CompanyJobSkillPoco GetSingleCompanyJobSkill(Guid id);
+        CompanyJobSkillPoco GetSingleCompanyJobSkill(string id);
         [OperationContract]
         void RemoveCompanyJobSkill(CompanyJobSkillPoco[] items);
         [OperationContract]
@@ -80,7 +80,7 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyLocationPoco> GetAllCompanyLocation();
         [OperationContract]
-        CompanyLocationPoco GetSingleCompanyLocation(Guid id);
+        CompanyLocationPoco GetSingleCompanyLocation(string id);
         [OperationContract]
         void RemoveCompanyLocation(CompanyLocationPoco[] items);
         [OperationContract]
@@ -92,12 +92,10 @@ namespace CareerCloud.WCF
         [OperationContract]
         List<CompanyProfilePoco> GetAllCompanyProfile();
         [OperationContract]
-        CompanyProfilePoco GetSingleCompanyProfile(Guid id);
+        CompanyProfilePoco GetSingleCompanyProfile(string id);
         [OperationContract]
         void RemoveCompanyProfile(CompanyProfilePoco[] items);
         [OperationContract]
         void UpdateCompanyProfile(CompanyProfilePoco[] items);
-
-
     }
 }

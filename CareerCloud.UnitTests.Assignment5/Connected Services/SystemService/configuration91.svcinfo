@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="+S26ic0VcXifncqWaU5LRK2v7HI=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="pLpJC4RuZtJswBX1Vl9GSRFY03Q=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ISystem">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ISystem" contract="System.ISystem" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/System/" bindingConfiguration="BasicHttpBinding_ISystem">
+    <endpoint name="BasicHttpBinding_ISystem" contract="SystemService.ISystem" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/System/" bindingConfiguration="BasicHttpBinding_ISystem">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/System/</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_ISystem</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>System.ISystem</serializedValue>
+          <serializedValue>SystemService.ISystem</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

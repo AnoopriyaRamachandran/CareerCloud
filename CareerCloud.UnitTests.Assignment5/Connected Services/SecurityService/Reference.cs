@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CareerCloud.UnitTests.Assignment5.Security {
+namespace CareerCloud.UnitTests.Assignment5.SecurityService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Security.ISecurity")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SecurityService.ISecurity")]
     public interface ISecurity {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/AddSecurityLogin", ReplyAction="http://tempuri.org/ISecurity/AddSecurityLoginResponse")]
@@ -28,16 +28,16 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
         System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginPoco[]> GetAllSecurityLoginAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityLogin", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginResponse")]
-        CareerCloud.Pocos.SecurityLoginPoco GetSingleSecurityLogin(System.Guid id);
+        CareerCloud.Pocos.SecurityLoginPoco GetSingleSecurityLogin(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityLogin", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginPoco> GetSingleSecurityLoginAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginPoco> GetSingleSecurityLoginAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityLogin", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityLoginResponse")]
-        void RemoveSecurityLogin(System.Guid id);
+        void RemoveSecurityLogin(CareerCloud.Pocos.SecurityLoginPoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityLogin", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityLoginResponse")]
-        System.Threading.Tasks.Task RemoveSecurityLoginAsync(System.Guid id);
+        System.Threading.Tasks.Task RemoveSecurityLoginAsync(CareerCloud.Pocos.SecurityLoginPoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/UpdateSecurityLogin", ReplyAction="http://tempuri.org/ISecurity/UpdateSecurityLoginResponse")]
         void UpdateSecurityLogin(CareerCloud.Pocos.SecurityLoginPoco[] items);
@@ -58,16 +58,16 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
         System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsLogPoco[]> GetAllSecurityLoginsLogAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLog", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLogResponse")]
-        CareerCloud.Pocos.SecurityLoginsLogPoco GetSingleSecurityLoginsLog(System.Guid id);
+        CareerCloud.Pocos.SecurityLoginsLogPoco GetSingleSecurityLoginsLog(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLog", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginsLogResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsLogPoco> GetSingleSecurityLoginsLogAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsLogPoco> GetSingleSecurityLoginsLogAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsLog", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityLoginsLogResponse")]
-        void RemoveSecurityLoginsLog(System.Guid id);
+        void RemoveSecurityLoginsLog(CareerCloud.Pocos.SecurityLoginsLogPoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsLog", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityLoginsLogResponse")]
-        System.Threading.Tasks.Task RemoveSecurityLoginsLogAsync(System.Guid id);
+        System.Threading.Tasks.Task RemoveSecurityLoginsLogAsync(CareerCloud.Pocos.SecurityLoginsLogPoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/UpdateSecurityLoginsLog", ReplyAction="http://tempuri.org/ISecurity/UpdateSecurityLoginsLogResponse")]
         void UpdateSecurityLoginsLog(CareerCloud.Pocos.SecurityLoginsLogPoco[] items);
@@ -88,16 +88,16 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
         System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsRolePoco[]> GetAllSecurityLoginsRoleAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRole", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRoleResponse")]
-        CareerCloud.Pocos.SecurityLoginsRolePoco GetSingleSecurityLoginsRole(System.Guid id);
+        CareerCloud.Pocos.SecurityLoginsRolePoco GetSingleSecurityLoginsRole(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRole", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityLoginsRoleResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsRolePoco> GetSingleSecurityLoginsRoleAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsRolePoco> GetSingleSecurityLoginsRoleAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsRole", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityLoginsRoleResponse")]
-        void RemoveSecurityLoginsRole(System.Guid id);
+        void RemoveSecurityLoginsRole(CareerCloud.Pocos.SecurityLoginsRolePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityLoginsRole", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityLoginsRoleResponse")]
-        System.Threading.Tasks.Task RemoveSecurityLoginsRoleAsync(System.Guid id);
+        System.Threading.Tasks.Task RemoveSecurityLoginsRoleAsync(CareerCloud.Pocos.SecurityLoginsRolePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/UpdateSecurityLoginsRole", ReplyAction="http://tempuri.org/ISecurity/UpdateSecurityLoginsRoleResponse")]
         void UpdateSecurityLoginsRole(CareerCloud.Pocos.SecurityLoginsRolePoco[] items);
@@ -118,16 +118,16 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
         System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityRolePoco[]> GetAllSecurityRoleAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityRole", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityRoleResponse")]
-        CareerCloud.Pocos.SecurityRolePoco GetSingleSecurityRole(System.Guid id);
+        CareerCloud.Pocos.SecurityRolePoco GetSingleSecurityRole(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/GetSingleSecurityRole", ReplyAction="http://tempuri.org/ISecurity/GetSingleSecurityRoleResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityRolePoco> GetSingleSecurityRoleAsync(System.Guid id);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityRolePoco> GetSingleSecurityRoleAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityRole", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityRoleResponse")]
-        void RemoveSecurityRole(System.Guid id);
+        void RemoveSecurityRole(CareerCloud.Pocos.SecurityRolePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/RemoveSecurityRole", ReplyAction="http://tempuri.org/ISecurity/RemoveSecurityRoleResponse")]
-        System.Threading.Tasks.Task RemoveSecurityRoleAsync(System.Guid id);
+        System.Threading.Tasks.Task RemoveSecurityRoleAsync(CareerCloud.Pocos.SecurityRolePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISecurity/UpdateSecurityRole", ReplyAction="http://tempuri.org/ISecurity/UpdateSecurityRoleResponse")]
         void UpdateSecurityRole(CareerCloud.Pocos.SecurityRolePoco[] items);
@@ -137,12 +137,12 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISecurityChannel : CareerCloud.UnitTests.Assignment5.Security.ISecurity, System.ServiceModel.IClientChannel {
+    public interface ISecurityChannel : CareerCloud.UnitTests.Assignment5.SecurityService.ISecurity, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SecurityClient : System.ServiceModel.ClientBase<CareerCloud.UnitTests.Assignment5.Security.ISecurity>, CareerCloud.UnitTests.Assignment5.Security.ISecurity {
+    public partial class SecurityClient : System.ServiceModel.ClientBase<CareerCloud.UnitTests.Assignment5.SecurityService.ISecurity>, CareerCloud.UnitTests.Assignment5.SecurityService.ISecurity {
         
         public SecurityClient() {
         }
@@ -179,20 +179,20 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
             return base.Channel.GetAllSecurityLoginAsync();
         }
         
-        public CareerCloud.Pocos.SecurityLoginPoco GetSingleSecurityLogin(System.Guid id) {
+        public CareerCloud.Pocos.SecurityLoginPoco GetSingleSecurityLogin(string id) {
             return base.Channel.GetSingleSecurityLogin(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginPoco> GetSingleSecurityLoginAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginPoco> GetSingleSecurityLoginAsync(string id) {
             return base.Channel.GetSingleSecurityLoginAsync(id);
         }
         
-        public void RemoveSecurityLogin(System.Guid id) {
-            base.Channel.RemoveSecurityLogin(id);
+        public void RemoveSecurityLogin(CareerCloud.Pocos.SecurityLoginPoco[] items) {
+            base.Channel.RemoveSecurityLogin(items);
         }
         
-        public System.Threading.Tasks.Task RemoveSecurityLoginAsync(System.Guid id) {
-            return base.Channel.RemoveSecurityLoginAsync(id);
+        public System.Threading.Tasks.Task RemoveSecurityLoginAsync(CareerCloud.Pocos.SecurityLoginPoco[] items) {
+            return base.Channel.RemoveSecurityLoginAsync(items);
         }
         
         public void UpdateSecurityLogin(CareerCloud.Pocos.SecurityLoginPoco[] items) {
@@ -219,20 +219,20 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
             return base.Channel.GetAllSecurityLoginsLogAsync();
         }
         
-        public CareerCloud.Pocos.SecurityLoginsLogPoco GetSingleSecurityLoginsLog(System.Guid id) {
+        public CareerCloud.Pocos.SecurityLoginsLogPoco GetSingleSecurityLoginsLog(string id) {
             return base.Channel.GetSingleSecurityLoginsLog(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsLogPoco> GetSingleSecurityLoginsLogAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsLogPoco> GetSingleSecurityLoginsLogAsync(string id) {
             return base.Channel.GetSingleSecurityLoginsLogAsync(id);
         }
         
-        public void RemoveSecurityLoginsLog(System.Guid id) {
-            base.Channel.RemoveSecurityLoginsLog(id);
+        public void RemoveSecurityLoginsLog(CareerCloud.Pocos.SecurityLoginsLogPoco[] items) {
+            base.Channel.RemoveSecurityLoginsLog(items);
         }
         
-        public System.Threading.Tasks.Task RemoveSecurityLoginsLogAsync(System.Guid id) {
-            return base.Channel.RemoveSecurityLoginsLogAsync(id);
+        public System.Threading.Tasks.Task RemoveSecurityLoginsLogAsync(CareerCloud.Pocos.SecurityLoginsLogPoco[] items) {
+            return base.Channel.RemoveSecurityLoginsLogAsync(items);
         }
         
         public void UpdateSecurityLoginsLog(CareerCloud.Pocos.SecurityLoginsLogPoco[] items) {
@@ -259,20 +259,20 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
             return base.Channel.GetAllSecurityLoginsRoleAsync();
         }
         
-        public CareerCloud.Pocos.SecurityLoginsRolePoco GetSingleSecurityLoginsRole(System.Guid id) {
+        public CareerCloud.Pocos.SecurityLoginsRolePoco GetSingleSecurityLoginsRole(string id) {
             return base.Channel.GetSingleSecurityLoginsRole(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsRolePoco> GetSingleSecurityLoginsRoleAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityLoginsRolePoco> GetSingleSecurityLoginsRoleAsync(string id) {
             return base.Channel.GetSingleSecurityLoginsRoleAsync(id);
         }
         
-        public void RemoveSecurityLoginsRole(System.Guid id) {
-            base.Channel.RemoveSecurityLoginsRole(id);
+        public void RemoveSecurityLoginsRole(CareerCloud.Pocos.SecurityLoginsRolePoco[] items) {
+            base.Channel.RemoveSecurityLoginsRole(items);
         }
         
-        public System.Threading.Tasks.Task RemoveSecurityLoginsRoleAsync(System.Guid id) {
-            return base.Channel.RemoveSecurityLoginsRoleAsync(id);
+        public System.Threading.Tasks.Task RemoveSecurityLoginsRoleAsync(CareerCloud.Pocos.SecurityLoginsRolePoco[] items) {
+            return base.Channel.RemoveSecurityLoginsRoleAsync(items);
         }
         
         public void UpdateSecurityLoginsRole(CareerCloud.Pocos.SecurityLoginsRolePoco[] items) {
@@ -299,20 +299,20 @@ namespace CareerCloud.UnitTests.Assignment5.Security {
             return base.Channel.GetAllSecurityRoleAsync();
         }
         
-        public CareerCloud.Pocos.SecurityRolePoco GetSingleSecurityRole(System.Guid id) {
+        public CareerCloud.Pocos.SecurityRolePoco GetSingleSecurityRole(string id) {
             return base.Channel.GetSingleSecurityRole(id);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityRolePoco> GetSingleSecurityRoleAsync(System.Guid id) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.SecurityRolePoco> GetSingleSecurityRoleAsync(string id) {
             return base.Channel.GetSingleSecurityRoleAsync(id);
         }
         
-        public void RemoveSecurityRole(System.Guid id) {
-            base.Channel.RemoveSecurityRole(id);
+        public void RemoveSecurityRole(CareerCloud.Pocos.SecurityRolePoco[] items) {
+            base.Channel.RemoveSecurityRole(items);
         }
         
-        public System.Threading.Tasks.Task RemoveSecurityRoleAsync(System.Guid id) {
-            return base.Channel.RemoveSecurityRoleAsync(id);
+        public System.Threading.Tasks.Task RemoveSecurityRoleAsync(CareerCloud.Pocos.SecurityRolePoco[] items) {
+            return base.Channel.RemoveSecurityRoleAsync(items);
         }
         
         public void UpdateSecurityRole(CareerCloud.Pocos.SecurityRolePoco[] items) {

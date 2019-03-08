@@ -69,32 +69,32 @@ namespace CareerCloud.WCF
             return _securityrolelogic.GetAll();
         }
 
-        public SecurityLoginPoco GetSingleSecurityLogin(Guid id)
+        public SecurityLoginPoco GetSingleSecurityLogin(string id)
         {
             EFGenericRepository<SecurityLoginPoco> securityloginrepo = new EFGenericRepository<SecurityLoginPoco>(false);
             SecurityLoginLogic _securityloginlogic = new SecurityLoginLogic(securityloginrepo);
-            return _securityloginlogic.Get(id);
+            return _securityloginlogic.Get(Guid.Parse(id));
         }
 
-        public SecurityLoginsLogPoco GetSingleSecurityLoginsLog(Guid id)
+        public SecurityLoginsLogPoco GetSingleSecurityLoginsLog(string id)
         {
             EFGenericRepository<SecurityLoginsLogPoco> securityloginslogrepo = new EFGenericRepository<SecurityLoginsLogPoco>(false);
             SecurityLoginsLogLogic _securityloginsloglogic = new SecurityLoginsLogLogic(securityloginslogrepo);
-            return _securityloginsloglogic.Get(id);
+            return _securityloginsloglogic.Get(Guid.Parse(id));
         }
 
-        public SecurityLoginsRolePoco GetSingleSecurityLoginsRole(Guid id)
+        public SecurityLoginsRolePoco GetSingleSecurityLoginsRole(string id)
         {
             EFGenericRepository<SecurityLoginsRolePoco> securityloginsrolerepo = new EFGenericRepository<SecurityLoginsRolePoco>(false);
             SecurityLoginsRoleLogic _securityloginsrolelogic = new SecurityLoginsRoleLogic(securityloginsrolerepo);
-            return _securityloginsrolelogic.Get(id);
+            return _securityloginsrolelogic.Get(Guid.Parse(id));
         }
 
-        public SecurityRolePoco GetSingleSecurityRole(Guid id)
+        public SecurityRolePoco GetSingleSecurityRole(string id)
         {
             EFGenericRepository<SecurityRolePoco> securityrolerepo = new EFGenericRepository<SecurityRolePoco>(false);
             SecurityRoleLogic _securityrolelogic = new SecurityRoleLogic(securityrolerepo);
-            return _securityrolelogic.Get(id);
+            return _securityrolelogic.Get(Guid.Parse(id));
         }
 
         public void RemoveSecurityLogin(SecurityLoginPoco[] items)

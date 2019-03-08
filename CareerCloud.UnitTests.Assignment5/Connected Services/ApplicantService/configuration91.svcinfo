@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kd2Vy6US3+euoI9DqCb9B3OH6WA=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="k6r/mxT50FDdckFoCuFkn7rWmdY=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IApplicant">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IApplicant" contract="Applicant.IApplicant" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/Applicant/" bindingConfiguration="BasicHttpBinding_IApplicant">
+    <endpoint name="BasicHttpBinding_IApplicant" contract="ApplicantService.IApplicant" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/Applicant/" bindingConfiguration="BasicHttpBinding_IApplicant">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8733/Design_Time_Addresses/CareerCloud.WCF/Applicant/</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IApplicant</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Applicant.IApplicant</serializedValue>
+          <serializedValue>ApplicantService.IApplicant</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

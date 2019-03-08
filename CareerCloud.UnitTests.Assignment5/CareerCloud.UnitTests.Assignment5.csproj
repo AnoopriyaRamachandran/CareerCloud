@@ -56,22 +56,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assignment5Marking.cs" />
-    <Compile Include="Connected Services\Applicant\Reference.cs">
+    <Compile Include="Connected Services\ApplicantService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\Company\Reference.cs">
+    <Compile Include="Connected Services\CompanyService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\Security\Reference.cs">
+    <Compile Include="Connected Services\SecurityService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\System\Reference.cs">
+    <Compile Include="Connected Services\SystemService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -80,44 +80,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Connected Services\Applicant\CareerCloud.Pocos.xsd">
+    <None Include="Connected Services\ApplicantService\CareerCloud.Pocos.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Applicant\service.wsdl" />
-    <None Include="Connected Services\Applicant\service.xsd">
+    <None Include="Connected Services\ApplicantService\service.wsdl" />
+    <None Include="Connected Services\ApplicantService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Applicant\service1.xsd">
+    <None Include="Connected Services\ApplicantService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Company\CareerCloud.Pocos.xsd">
+    <None Include="Connected Services\CompanyService\CareerCloud.Pocos.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Company\service.wsdl" />
-    <None Include="Connected Services\Company\service.xsd">
+    <None Include="Connected Services\CompanyService\service.wsdl" />
+    <None Include="Connected Services\CompanyService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Company\service1.xsd">
+    <None Include="Connected Services\CompanyService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Security\CareerCloud.Pocos.xsd">
+    <None Include="Connected Services\SecurityService\CareerCloud.Pocos.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Security\service.wsdl" />
-    <None Include="Connected Services\Security\service.xsd">
+    <None Include="Connected Services\SecurityService\service.wsdl" />
+    <None Include="Connected Services\SecurityService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\Security\service1.xsd">
+    <None Include="Connected Services\SecurityService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\System\CareerCloud.Pocos.xsd">
+    <None Include="Connected Services\SystemService\CareerCloud.Pocos.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\System\service.wsdl" />
-    <None Include="Connected Services\System\service.xsd">
+    <None Include="Connected Services\SystemService\service.wsdl" />
+    <None Include="Connected Services\SystemService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\System\service1.xsd">
+    <None Include="Connected Services\SystemService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -163,55 +163,55 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\Applicant\" />
-    <WCFMetadataStorage Include="Connected Services\Company\" />
-    <WCFMetadataStorage Include="Connected Services\Security\" />
-    <WCFMetadataStorage Include="Connected Services\System\" />
+    <WCFMetadataStorage Include="Connected Services\ApplicantService\" />
+    <WCFMetadataStorage Include="Connected Services\CompanyService\" />
+    <WCFMetadataStorage Include="Connected Services\SecurityService\" />
+    <WCFMetadataStorage Include="Connected Services\SystemService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Applicant\configuration91.svcinfo" />
+    <None Include="Connected Services\CompanyService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Applicant\configuration.svcinfo" />
+    <None Include="Connected Services\CompanyService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Applicant\Reference.svcmap">
+    <None Include="Connected Services\CompanyService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Company\configuration91.svcinfo" />
+    <None Include="Connected Services\SecurityService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Company\configuration.svcinfo" />
+    <None Include="Connected Services\SecurityService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Company\Reference.svcmap">
+    <None Include="Connected Services\SecurityService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Security\configuration91.svcinfo" />
+    <None Include="Connected Services\SystemService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Security\configuration.svcinfo" />
+    <None Include="Connected Services\SystemService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\Security\Reference.svcmap">
+    <None Include="Connected Services\SystemService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\System\configuration91.svcinfo" />
+    <None Include="Connected Services\ApplicantService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\System\configuration.svcinfo" />
+    <None Include="Connected Services\ApplicantService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\System\Reference.svcmap">
+    <None Include="Connected Services\ApplicantService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

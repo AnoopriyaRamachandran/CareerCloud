@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CareerCloud.UnitTests.Assignment5.System {
+namespace CareerCloud.UnitTests.Assignment5.SystemService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="System.ISystem")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SystemService.ISystem")]
     public interface ISystem {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/AddSystemCountryCode", ReplyAction="http://tempuri.org/ISystem/AddSystemCountryCodeResponse")]
@@ -28,16 +28,16 @@ namespace CareerCloud.UnitTests.Assignment5.System {
         System.Threading.Tasks.Task<CareerCloud.Pocos.SystemCountryCodePoco[]> GetAllSystemCountryCodeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/GetSingleSystemCountryCode", ReplyAction="http://tempuri.org/ISystem/GetSingleSystemCountryCodeResponse")]
-        CareerCloud.Pocos.SystemCountryCodePoco GetSingleSystemCountryCode(System.Guid Code);
+        CareerCloud.Pocos.SystemCountryCodePoco GetSingleSystemCountryCode(string Code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/GetSingleSystemCountryCode", ReplyAction="http://tempuri.org/ISystem/GetSingleSystemCountryCodeResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.SystemCountryCodePoco> GetSingleSystemCountryCodeAsync(System.Guid Code);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.SystemCountryCodePoco> GetSingleSystemCountryCodeAsync(string Code);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/RemoveSystemCountryCode", ReplyAction="http://tempuri.org/ISystem/RemoveSystemCountryCodeResponse")]
-        void RemoveSystemCountryCode(System.Guid Code);
+        void RemoveSystemCountryCode(CareerCloud.Pocos.SystemCountryCodePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/RemoveSystemCountryCode", ReplyAction="http://tempuri.org/ISystem/RemoveSystemCountryCodeResponse")]
-        System.Threading.Tasks.Task RemoveSystemCountryCodeAsync(System.Guid Code);
+        System.Threading.Tasks.Task RemoveSystemCountryCodeAsync(CareerCloud.Pocos.SystemCountryCodePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/UpdateSystemCountryCode", ReplyAction="http://tempuri.org/ISystem/UpdateSystemCountryCodeResponse")]
         void UpdateSystemCountryCode(CareerCloud.Pocos.SystemCountryCodePoco[] items);
@@ -58,16 +58,16 @@ namespace CareerCloud.UnitTests.Assignment5.System {
         System.Threading.Tasks.Task<CareerCloud.Pocos.SystemLanguageCodePoco[]> GetAllSystemLanguageCodeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/GetSingleSystemLanguageCode", ReplyAction="http://tempuri.org/ISystem/GetSingleSystemLanguageCodeResponse")]
-        CareerCloud.Pocos.SystemLanguageCodePoco GetSingleSystemLanguageCode(System.Guid LanguageId);
+        CareerCloud.Pocos.SystemLanguageCodePoco GetSingleSystemLanguageCode(string LanguageId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/GetSingleSystemLanguageCode", ReplyAction="http://tempuri.org/ISystem/GetSingleSystemLanguageCodeResponse")]
-        System.Threading.Tasks.Task<CareerCloud.Pocos.SystemLanguageCodePoco> GetSingleSystemLanguageCodeAsync(System.Guid LanguageId);
+        System.Threading.Tasks.Task<CareerCloud.Pocos.SystemLanguageCodePoco> GetSingleSystemLanguageCodeAsync(string LanguageId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/RemoveSystemLanguageCode", ReplyAction="http://tempuri.org/ISystem/RemoveSystemLanguageCodeResponse")]
-        void RemoveSystemLanguageCode(System.Guid LanguageId);
+        void RemoveSystemLanguageCode(CareerCloud.Pocos.SystemLanguageCodePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/RemoveSystemLanguageCode", ReplyAction="http://tempuri.org/ISystem/RemoveSystemLanguageCodeResponse")]
-        System.Threading.Tasks.Task RemoveSystemLanguageCodeAsync(System.Guid LanguageId);
+        System.Threading.Tasks.Task RemoveSystemLanguageCodeAsync(CareerCloud.Pocos.SystemLanguageCodePoco[] items);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISystem/UpdateSystemLanguageCode", ReplyAction="http://tempuri.org/ISystem/UpdateSystemLanguageCodeResponse")]
         void UpdateSystemLanguageCode(CareerCloud.Pocos.SystemLanguageCodePoco[] items);
@@ -77,12 +77,12 @@ namespace CareerCloud.UnitTests.Assignment5.System {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISystemChannel : CareerCloud.UnitTests.Assignment5.System.ISystem, System.ServiceModel.IClientChannel {
+    public interface ISystemChannel : CareerCloud.UnitTests.Assignment5.SystemService.ISystem, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SystemClient : System.ServiceModel.ClientBase<CareerCloud.UnitTests.Assignment5.System.ISystem>, CareerCloud.UnitTests.Assignment5.System.ISystem {
+    public partial class SystemClient : System.ServiceModel.ClientBase<CareerCloud.UnitTests.Assignment5.SystemService.ISystem>, CareerCloud.UnitTests.Assignment5.SystemService.ISystem {
         
         public SystemClient() {
         }
@@ -119,20 +119,20 @@ namespace CareerCloud.UnitTests.Assignment5.System {
             return base.Channel.GetAllSystemCountryCodeAsync();
         }
         
-        public CareerCloud.Pocos.SystemCountryCodePoco GetSingleSystemCountryCode(System.Guid Code) {
+        public CareerCloud.Pocos.SystemCountryCodePoco GetSingleSystemCountryCode(string Code) {
             return base.Channel.GetSingleSystemCountryCode(Code);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.SystemCountryCodePoco> GetSingleSystemCountryCodeAsync(System.Guid Code) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.SystemCountryCodePoco> GetSingleSystemCountryCodeAsync(string Code) {
             return base.Channel.GetSingleSystemCountryCodeAsync(Code);
         }
         
-        public void RemoveSystemCountryCode(System.Guid Code) {
-            base.Channel.RemoveSystemCountryCode(Code);
+        public void RemoveSystemCountryCode(CareerCloud.Pocos.SystemCountryCodePoco[] items) {
+            base.Channel.RemoveSystemCountryCode(items);
         }
         
-        public System.Threading.Tasks.Task RemoveSystemCountryCodeAsync(System.Guid Code) {
-            return base.Channel.RemoveSystemCountryCodeAsync(Code);
+        public System.Threading.Tasks.Task RemoveSystemCountryCodeAsync(CareerCloud.Pocos.SystemCountryCodePoco[] items) {
+            return base.Channel.RemoveSystemCountryCodeAsync(items);
         }
         
         public void UpdateSystemCountryCode(CareerCloud.Pocos.SystemCountryCodePoco[] items) {
@@ -159,20 +159,20 @@ namespace CareerCloud.UnitTests.Assignment5.System {
             return base.Channel.GetAllSystemLanguageCodeAsync();
         }
         
-        public CareerCloud.Pocos.SystemLanguageCodePoco GetSingleSystemLanguageCode(System.Guid LanguageId) {
+        public CareerCloud.Pocos.SystemLanguageCodePoco GetSingleSystemLanguageCode(string LanguageId) {
             return base.Channel.GetSingleSystemLanguageCode(LanguageId);
         }
         
-        public System.Threading.Tasks.Task<CareerCloud.Pocos.SystemLanguageCodePoco> GetSingleSystemLanguageCodeAsync(System.Guid LanguageId) {
+        public System.Threading.Tasks.Task<CareerCloud.Pocos.SystemLanguageCodePoco> GetSingleSystemLanguageCodeAsync(string LanguageId) {
             return base.Channel.GetSingleSystemLanguageCodeAsync(LanguageId);
         }
         
-        public void RemoveSystemLanguageCode(System.Guid LanguageId) {
-            base.Channel.RemoveSystemLanguageCode(LanguageId);
+        public void RemoveSystemLanguageCode(CareerCloud.Pocos.SystemLanguageCodePoco[] items) {
+            base.Channel.RemoveSystemLanguageCode(items);
         }
         
-        public System.Threading.Tasks.Task RemoveSystemLanguageCodeAsync(System.Guid LanguageId) {
-            return base.Channel.RemoveSystemLanguageCodeAsync(LanguageId);
+        public System.Threading.Tasks.Task RemoveSystemLanguageCodeAsync(CareerCloud.Pocos.SystemLanguageCodePoco[] items) {
+            return base.Channel.RemoveSystemLanguageCodeAsync(items);
         }
         
         public void UpdateSystemLanguageCode(CareerCloud.Pocos.SystemLanguageCodePoco[] items) {

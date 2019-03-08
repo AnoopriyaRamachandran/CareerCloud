@@ -99,46 +99,47 @@ namespace CareerCloud.WCF
             return _applicantworkhistorylogic.GetAll();
         }
 
-        public ApplicantEducationPoco GetSingleApplicantEducation(Guid id)
+        public ApplicantEducationPoco GetSingleApplicantEducation(string id)
         {
+            
             EFGenericRepository<ApplicantEducationPoco> applicanteducationrepo = new EFGenericRepository<ApplicantEducationPoco>(false);
             ApplicantEducationLogic _applicanteducationlogic = new ApplicantEducationLogic(applicanteducationrepo);
-            return _applicanteducationlogic.Get(id);
+            return _applicanteducationlogic.Get(Guid.Parse(id));
         }
 
-        public ApplicantJobApplicationPoco GetSingleApplicantJobApplication(Guid id)
+        public ApplicantJobApplicationPoco GetSingleApplicantJobApplication(string id)
         {
             EFGenericRepository<ApplicantJobApplicationPoco> applicantjobapplicationrepo = new EFGenericRepository<ApplicantJobApplicationPoco>(false);
             ApplicantJobApplicationLogic _applicantjobapplicationlogic = new ApplicantJobApplicationLogic(applicantjobapplicationrepo);
-            return _applicantjobapplicationlogic.Get(id);
+            return _applicantjobapplicationlogic.Get(Guid.Parse(id));
         }
 
-        public ApplicantProfilePoco GetSingleApplicantProfile(Guid id)
+        public ApplicantProfilePoco GetSingleApplicantProfile(string id)
         {
             EFGenericRepository<ApplicantProfilePoco> applicantprofilerepo = new EFGenericRepository<ApplicantProfilePoco>(false);
             ApplicantProfileLogic _applicantprofilelogic = new ApplicantProfileLogic(applicantprofilerepo);
-            return _applicantprofilelogic.Get(id);
+            return _applicantprofilelogic.Get(Guid.Parse(id));
         }
 
-        public ApplicantResumePoco GetSingleApplicantResume(Guid id)
+        public ApplicantResumePoco GetSingleApplicantResume(string id)
         {
             EFGenericRepository<ApplicantResumePoco> applicantresumerepo = new EFGenericRepository<ApplicantResumePoco>(false);
             ApplicantResumeLogic _applicantresumelogic = new ApplicantResumeLogic(applicantresumerepo);
-            return _applicantresumelogic.Get(id);
+            return _applicantresumelogic.Get(Guid.Parse(id));
         }
 
-        public ApplicantSkillPoco GetSingleApplicantSkill(Guid id)
+        public ApplicantSkillPoco GetSingleApplicantSkill(string id)
         {
             EFGenericRepository<ApplicantSkillPoco> applicantskillrepo = new EFGenericRepository<ApplicantSkillPoco>(false);
             ApplicantSkillLogic _applicantskilllogic = new ApplicantSkillLogic(applicantskillrepo);
-            return _applicantskilllogic.Get(id);
+            return _applicantskilllogic.Get(Guid.Parse(id));
         }
 
-        public ApplicantWorkHistoryPoco GetSingleApplicantWorkHistory(Guid id)
+        public ApplicantWorkHistoryPoco GetSingleApplicantWorkHistory(string id)
         {
             EFGenericRepository<ApplicantWorkHistoryPoco> applicantworkhistoryrepo = new EFGenericRepository<ApplicantWorkHistoryPoco>(false);
             ApplicantWorkHistoryLogic _applicantworkhistorylogic = new ApplicantWorkHistoryLogic(applicantworkhistoryrepo);
-            return _applicantworkhistorylogic.Get(id);
+            return _applicantworkhistorylogic.Get(Guid.Parse(id));
         }
 
        

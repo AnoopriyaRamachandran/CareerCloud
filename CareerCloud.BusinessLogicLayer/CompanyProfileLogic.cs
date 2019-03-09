@@ -32,7 +32,7 @@ namespace CareerCloud.BusinessLogicLayer
             foreach (CompanyProfilePoco item in pocos)
             {
                 
-                string[] webextension = { "ca", "com", "biz" };
+                /*string[] webextension = { "ca", "com", "biz" };
                 string userextension = Path.GetExtension(item.CompanyWebsite);
                 for(int i=0;i<webextension.Length;i++)
                 {
@@ -40,6 +40,16 @@ namespace CareerCloud.BusinessLogicLayer
                     {
                         exceptions.Add(new ValidationException(600, $"CompanyWebsite for CompanyProfileLogin {item.Id} is not a valid website format."));
                     }
+
+                }*/
+                if(string.IsNullOrEmpty(item.CompanyWebsite))
+                {
+                    exceptions.Add(new ValidationException(600, $"CompanyWebsite for CompanyProfileLogin {item.Id} is not a valid website format."));
+                }
+                else if (!Regex.IsMatch(item.CompanyWebsite, @"^(((ht|f)tp(s?))\://)?(www.|[a-zA-Z].)[a-zA-Z0-9\-\.]+\.(com|ca|biz)(\:[0-9]+)*(/($|[a-zA-Z0-9\.\,\;\?\'\\\+&amp;%\$#\=~_\-]+))*$", RegexOptions.IgnoreCase))
+
+                {
+                    exceptions.Add(new ValidationException(600, $"CompanyWebsite for CompanyProfileLogin {item.Id} must end with .ca,.com,.biz extensions"));
 
                 }
                 if (string.IsNullOrEmpty(item.ContactPhone))

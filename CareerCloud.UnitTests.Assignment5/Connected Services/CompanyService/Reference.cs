@@ -75,6 +75,12 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/UpdateCompanyJobDescription", ReplyAction="http://tempuri.org/ICompany/UpdateCompanyJobDescriptionResponse")]
         System.Threading.Tasks.Task UpdateCompanyJobDescriptionAsync(CareerCloud.Pocos.CompanyJobDescriptionPoco[] items);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyJobEducation", ReplyAction="http://tempuri.org/ICompany/AddCompanyJobEducationResponse")]
+        void AddCompanyJobEducation(CareerCloud.Pocos.CompanyJobEducationPoco[] item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyJobEducation", ReplyAction="http://tempuri.org/ICompany/AddCompanyJobEducationResponse")]
+        System.Threading.Tasks.Task AddCompanyJobEducationAsync(CareerCloud.Pocos.CompanyJobEducationPoco[] item);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/GetAllCompanyJobEducation", ReplyAction="http://tempuri.org/ICompany/GetAllCompanyJobEducationResponse")]
         CareerCloud.Pocos.CompanyJobEducationPoco[] GetAllCompanyJobEducation();
         
@@ -98,6 +104,12 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/UpdateCompanyJobEducation", ReplyAction="http://tempuri.org/ICompany/UpdateCompanyJobEducationResponse")]
         System.Threading.Tasks.Task UpdateCompanyJobEducationAsync(CareerCloud.Pocos.CompanyJobEducationPoco[] items);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyJob", ReplyAction="http://tempuri.org/ICompany/AddCompanyJobResponse")]
+        void AddCompanyJob(CareerCloud.Pocos.CompanyJobPoco[] item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyJob", ReplyAction="http://tempuri.org/ICompany/AddCompanyJobResponse")]
+        System.Threading.Tasks.Task AddCompanyJobAsync(CareerCloud.Pocos.CompanyJobPoco[] item);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/GetAllCompanyJob", ReplyAction="http://tempuri.org/ICompany/GetAllCompanyJobResponse")]
         CareerCloud.Pocos.CompanyJobPoco[] GetAllCompanyJob();
@@ -123,6 +135,12 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/UpdateCompanyJob", ReplyAction="http://tempuri.org/ICompany/UpdateCompanyJobResponse")]
         System.Threading.Tasks.Task UpdateCompanyJobAsync(CareerCloud.Pocos.CompanyJobPoco[] items);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyJobSkill", ReplyAction="http://tempuri.org/ICompany/AddCompanyJobSkillResponse")]
+        void AddCompanyJobSkill(CareerCloud.Pocos.CompanyJobSkillPoco[] item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyJobSkill", ReplyAction="http://tempuri.org/ICompany/AddCompanyJobSkillResponse")]
+        System.Threading.Tasks.Task AddCompanyJobSkillAsync(CareerCloud.Pocos.CompanyJobSkillPoco[] item);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/GetAllCompanyJobSkill", ReplyAction="http://tempuri.org/ICompany/GetAllCompanyJobSkillResponse")]
         CareerCloud.Pocos.CompanyJobSkillPoco[] GetAllCompanyJobSkill();
         
@@ -147,6 +165,12 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/UpdateCompanyJobSkill", ReplyAction="http://tempuri.org/ICompany/UpdateCompanyJobSkillResponse")]
         System.Threading.Tasks.Task UpdateCompanyJobSkillAsync(CareerCloud.Pocos.CompanyJobSkillPoco[] items);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyLocation", ReplyAction="http://tempuri.org/ICompany/AddCompanyLocationResponse")]
+        void AddCompanyLocation(CareerCloud.Pocos.CompanyLocationPoco[] item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyLocation", ReplyAction="http://tempuri.org/ICompany/AddCompanyLocationResponse")]
+        System.Threading.Tasks.Task AddCompanyLocationAsync(CareerCloud.Pocos.CompanyLocationPoco[] item);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/GetAllCompanyLocation", ReplyAction="http://tempuri.org/ICompany/GetAllCompanyLocationResponse")]
         CareerCloud.Pocos.CompanyLocationPoco[] GetAllCompanyLocation();
         
@@ -170,6 +194,12 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/UpdateCompanyLocation", ReplyAction="http://tempuri.org/ICompany/UpdateCompanyLocationResponse")]
         System.Threading.Tasks.Task UpdateCompanyLocationAsync(CareerCloud.Pocos.CompanyLocationPoco[] items);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyProfile", ReplyAction="http://tempuri.org/ICompany/AddCompanyProfileResponse")]
+        void AddCompanyProfile(CareerCloud.Pocos.CompanyProfilePoco[] item);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/AddCompanyProfile", ReplyAction="http://tempuri.org/ICompany/AddCompanyProfileResponse")]
+        System.Threading.Tasks.Task AddCompanyProfileAsync(CareerCloud.Pocos.CompanyProfilePoco[] item);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompany/GetAllCompanyProfile", ReplyAction="http://tempuri.org/ICompany/GetAllCompanyProfileResponse")]
         CareerCloud.Pocos.CompanyProfilePoco[] GetAllCompanyProfile();
@@ -303,6 +333,14 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
             return base.Channel.UpdateCompanyJobDescriptionAsync(items);
         }
         
+        public void AddCompanyJobEducation(CareerCloud.Pocos.CompanyJobEducationPoco[] item) {
+            base.Channel.AddCompanyJobEducation(item);
+        }
+        
+        public System.Threading.Tasks.Task AddCompanyJobEducationAsync(CareerCloud.Pocos.CompanyJobEducationPoco[] item) {
+            return base.Channel.AddCompanyJobEducationAsync(item);
+        }
+        
         public CareerCloud.Pocos.CompanyJobEducationPoco[] GetAllCompanyJobEducation() {
             return base.Channel.GetAllCompanyJobEducation();
         }
@@ -333,6 +371,14 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         
         public System.Threading.Tasks.Task UpdateCompanyJobEducationAsync(CareerCloud.Pocos.CompanyJobEducationPoco[] items) {
             return base.Channel.UpdateCompanyJobEducationAsync(items);
+        }
+        
+        public void AddCompanyJob(CareerCloud.Pocos.CompanyJobPoco[] item) {
+            base.Channel.AddCompanyJob(item);
+        }
+        
+        public System.Threading.Tasks.Task AddCompanyJobAsync(CareerCloud.Pocos.CompanyJobPoco[] item) {
+            return base.Channel.AddCompanyJobAsync(item);
         }
         
         public CareerCloud.Pocos.CompanyJobPoco[] GetAllCompanyJob() {
@@ -367,6 +413,14 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
             return base.Channel.UpdateCompanyJobAsync(items);
         }
         
+        public void AddCompanyJobSkill(CareerCloud.Pocos.CompanyJobSkillPoco[] item) {
+            base.Channel.AddCompanyJobSkill(item);
+        }
+        
+        public System.Threading.Tasks.Task AddCompanyJobSkillAsync(CareerCloud.Pocos.CompanyJobSkillPoco[] item) {
+            return base.Channel.AddCompanyJobSkillAsync(item);
+        }
+        
         public CareerCloud.Pocos.CompanyJobSkillPoco[] GetAllCompanyJobSkill() {
             return base.Channel.GetAllCompanyJobSkill();
         }
@@ -399,6 +453,14 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
             return base.Channel.UpdateCompanyJobSkillAsync(items);
         }
         
+        public void AddCompanyLocation(CareerCloud.Pocos.CompanyLocationPoco[] item) {
+            base.Channel.AddCompanyLocation(item);
+        }
+        
+        public System.Threading.Tasks.Task AddCompanyLocationAsync(CareerCloud.Pocos.CompanyLocationPoco[] item) {
+            return base.Channel.AddCompanyLocationAsync(item);
+        }
+        
         public CareerCloud.Pocos.CompanyLocationPoco[] GetAllCompanyLocation() {
             return base.Channel.GetAllCompanyLocation();
         }
@@ -429,6 +491,14 @@ namespace CareerCloud.UnitTests.Assignment5.CompanyService {
         
         public System.Threading.Tasks.Task UpdateCompanyLocationAsync(CareerCloud.Pocos.CompanyLocationPoco[] items) {
             return base.Channel.UpdateCompanyLocationAsync(items);
+        }
+        
+        public void AddCompanyProfile(CareerCloud.Pocos.CompanyProfilePoco[] item) {
+            base.Channel.AddCompanyProfile(item);
+        }
+        
+        public System.Threading.Tasks.Task AddCompanyProfileAsync(CareerCloud.Pocos.CompanyProfilePoco[] item) {
+            return base.Channel.AddCompanyProfileAsync(item);
         }
         
         public CareerCloud.Pocos.CompanyProfilePoco[] GetAllCompanyProfile() {

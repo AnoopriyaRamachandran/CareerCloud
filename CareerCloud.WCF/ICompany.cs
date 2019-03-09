@@ -40,6 +40,7 @@ namespace CareerCloud.WCF
 
         //CompanyJobEducationPoco
 
+        [OperationContract]
         void AddCompanyJobEducation(CompanyJobEducationPoco[] item);
         [OperationContract]
         List<CompanyJobEducationPoco> GetAllCompanyJobEducation();
@@ -51,7 +52,7 @@ namespace CareerCloud.WCF
         void UpdateCompanyJobEducation(CompanyJobEducationPoco[] items);
 
         //CompanyJobPoco
-
+        [OperationContract]
         void AddCompanyJob(CompanyJobPoco[] item);
         [OperationContract]
         List<CompanyJobPoco> GetAllCompanyJob();
@@ -63,7 +64,7 @@ namespace CareerCloud.WCF
         void UpdateCompanyJob(CompanyJobPoco[] items);
 
         //CompanyJobSkillPoco
-
+        [OperationContract]
         void AddCompanyJobSkill(CompanyJobSkillPoco[] item);
         [OperationContract]
         List<CompanyJobSkillPoco> GetAllCompanyJobSkill();
@@ -75,7 +76,7 @@ namespace CareerCloud.WCF
         void UpdateCompanyJobSkill(CompanyJobSkillPoco[] items);
 
         //CompanyLocationPoco
-
+        [OperationContract]
         void AddCompanyLocation(CompanyLocationPoco[] item);
         [OperationContract]
         List<CompanyLocationPoco> GetAllCompanyLocation();
@@ -87,7 +88,7 @@ namespace CareerCloud.WCF
         void UpdateCompanyLocation(CompanyLocationPoco[] items);
 
         //CompanyProfilePoco
-
+        [OperationContract]
         void AddCompanyProfile(CompanyProfilePoco[] item);
         [OperationContract]
         List<CompanyProfilePoco> GetAllCompanyProfile();
